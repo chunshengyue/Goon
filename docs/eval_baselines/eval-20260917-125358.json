@@ -1,0 +1,1030 @@
+{
+  "environment": {
+    "capturedAt": "2026-09-17T11:10:58+08:00",
+    "repoCommit": "ae7b4b50d7d0ff4345916aba35d75c26a589e8f0",
+    "repoDirty": true,
+    "adb": "C:\\Users\\17525\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe",
+    "device": "default",
+    "hostPort": 18765,
+    "androidRelease": "16",
+    "androidSdk": "36",
+    "deviceModel": "PHK110",
+    "apkVersion": "1.0",
+    "stayAwake": true
+  },
+  "models": [
+    "deepseek-flash"
+  ],
+  "totals": {
+    "cases": 18,
+    "evaluated": 18,
+    "passed": 18,
+    "failed": 0,
+    "taskSuccessRate": 1.0,
+    "pendingSkipped": 0,
+    "pendingRuntime": 0
+  },
+  "cost": {
+    "runsWithCacheData": 12,
+    "promptTokens": 15411743,
+    "promptTokensUncached": 1800479,
+    "cachedTokens": 13611264,
+    "completionTokens": 636423,
+    "reasoningTokens": 419698,
+    "modelAttempts": 350,
+    "cacheHitRate": 0.8832
+  },
+  "bySuite": {
+    "legacy": {
+      "total": 18,
+      "passed": 18,
+      "passRate": 1.0
+    }
+  },
+  "stability": {
+    "repeats": 3,
+    "cases": 6,
+    "passAt1": 1.0,
+    "passAtK": 1.0,
+    "passPowK": 1.0,
+    "perCase": {
+      "create-checklist": [
+        1,
+        1,
+        1
+      ],
+      "create-multipage": [
+        1,
+        1,
+        1
+      ],
+      "modify-theme": [
+        1,
+        1,
+        1
+      ],
+      "provider-fallback": [
+        1,
+        1,
+        1
+      ],
+      "unsupported-camera": [
+        1,
+        1,
+        1
+      ],
+      "empty-request": [
+        1,
+        1,
+        1
+      ]
+    }
+  },
+  "skipped": [],
+  "pendingRuntime": [],
+  "results": [
+    {
+      "caseId": "create-checklist",
+      "title": "创建清单",
+      "suite": "legacy",
+      "category": "creation",
+      "runId": "6e595f67-5d69-4da4-9207-e7d7c1ac30d3",
+      "runStatus": "completed",
+      "model": "deepseek-flash",
+      "modelAttempts": 15,
+      "promptTokens": 344693,
+      "completionTokens": 34122,
+      "cachedTokens": 320000,
+      "reasoningTokens": 21327,
+      "cacheHitRate": 0.9284,
+      "runMessage": "「行装清单」做好了，可以当一张装箱单来用。\n\n**怎么用**：上面写下要带的东西（也可以直接点常用项快速加进来），选一个分类——证件、衣物、洗漱、药品、电子、其他——再点「加入清单」。加进来之后按分类分行列出，每行前面一个方框，装进箱子就点一下：方框填实、名字划掉，读数里的「待装」自己减一。每行右边一个叉，点一下就删掉，删错了上面会留一条撤销，九秒内点回来东西原样归位（同一套撤销也管后面两个批量按钮）。删完不留痕的担心可以放下。\n\n**读数和进度**：顶上一块仪表：合计、已装、待装三个数，下面一条进度条是拿每一件东西拼出来的——装了几件就黑几格，扫一眼就知道还剩多少。清单长了（超过四十件）会说明进度条只画了前四十件。列表头上三个筛选：全部、待装、已装，各带条数，出门前就看「待装」那一栏。\n\n**批量**：清单底部两个按钮，「全部标为已装」和「清除已装项」，前者一键收尾，后者清掉已经勾掉的那些，误点了也能撤销。清单空着的时候它们自动隐起來，不会占着地方。\n\n**顺手的地方**：名字空着不会悄悄不响应，会明确提醒先写名称；同一件东西重复登记会被拦下并告诉你已经有了；清单到 120 项会给上限提示；存储写不进去时会明确说「空间不够，先删掉几条旧记录」，并且不会把你刚写的那一条弄丢。每一条都自动存下来，下次打开还是原样，单据编号和日期也不变。\n\n**看起来是**：工业规格单的样子，不是通用卡片列表。混凝土灰的纸面、墨黑的硬边线、唯一的信号红只用在「待装」数字、文件标识条和四角标上；标题走宋体单据头，编号、读数、分类名走等宽字，物品名走无衬线；分类之间是发丝分隔线和点线引导，行表是连续单据而不是浮起的小方块。三处制图标记贯穿全页：标题上方的标识条、面板与空状态的四角标、页脚竖线下的刻度纹。\n\n**验证**：在真机尺寸下走完了整条线——空清单、写下名称加入、点常用项加入、勾选、切到已装",
+      "judgment": {
+        "caseId": "create-checklist",
+        "title": "创建清单",
+        "suite": "legacy",
+        "runId": "6e595f67-5d69-4da4-9207-e7d7c1ac30d3",
+        "passed": true,
+        "checks": [
+          {
+            "type": "artifact",
+            "passed": true
+          },
+          {
+            "type": "terminal",
+            "passed": true
+          },
+          {
+            "type": "project",
+            "passed": true
+          },
+          {
+            "type": "interaction",
+            "passed": true
+          },
+          {
+            "type": "tools",
+            "passed": true
+          },
+          {
+            "type": "controls",
+            "passed": true
+          },
+          {
+            "type": "isolation",
+            "passed": true
+          }
+        ],
+        "failures": [],
+        "artifactEndpoint": "/test/runs/6e595f67-5d69-4da4-9207-e7d7c1ac30d3"
+      },
+      "passed": true,
+      "failures": [],
+      "artifact": "/test/runs/6e595f67-5d69-4da4-9207-e7d7c1ac30d3",
+      "elapsedSeconds": 344.4,
+      "attempt": 1
+    },
+    {
+      "caseId": "create-multipage",
+      "title": "创建多页面应用",
+      "suite": "legacy",
+      "category": "creation",
+      "runId": "c11c1223-4617-47a6-966e-2225c8d68f56",
+      "runStatus": "completed",
+      "model": "deepseek-flash",
+      "modelAttempts": 48,
+      "promptTokens": 3332053,
+      "completionTokens": 99098,
+      "cachedTokens": 2961536,
+      "reasoningTokens": 61955,
+      "cacheHitRate": 0.8888,
+      "runMessage": "已经做出可用版本并交付（已达到本次 48 轮预算（已延长 2 次，额度用尽） 触发降级交付）：页边 · 读书记录。**未完成的部分**：**没有通过预览验证**，交互可能有问题。最近一次验证：通过（断言 1 条）。 你可以继续追加要求（例如「把没验证的地方修一下」），我会在现有版本上接着做。",
+      "judgment": {
+        "caseId": "create-multipage",
+        "title": "创建多页面应用",
+        "suite": "legacy",
+        "runId": "c11c1223-4617-47a6-966e-2225c8d68f56",
+        "passed": true,
+        "checks": [
+          {
+            "type": "artifact",
+            "passed": true
+          },
+          {
+            "type": "terminal",
+            "passed": true
+          },
+          {
+            "type": "project",
+            "passed": true
+          },
+          {
+            "type": "interaction",
+            "passed": true
+          },
+          {
+            "type": "projectContains",
+            "passed": true
+          },
+          {
+            "type": "boundary",
+            "passed": true
+          },
+          {
+            "type": "isolation",
+            "passed": true
+          }
+        ],
+        "failures": [],
+        "artifactEndpoint": "/test/runs/c11c1223-4617-47a6-966e-2225c8d68f56"
+      },
+      "passed": true,
+      "failures": [],
+      "artifact": "/test/runs/c11c1223-4617-47a6-966e-2225c8d68f56",
+      "elapsedSeconds": 733.0,
+      "attempt": 1
+    },
+    {
+      "caseId": "modify-theme",
+      "title": "修改主题",
+      "suite": "legacy",
+      "category": "modification",
+      "setupRunId": "154cf24c-9bed-439f-890a-c11f3135534e",
+      "setupRunStatus": "completed",
+      "runId": "e98b42c0-1176-463f-8f64-e414443dd4c6",
+      "runStatus": "completed",
+      "model": "deepseek-flash",
+      "modelAttempts": 26,
+      "promptTokens": 434477,
+      "completionTokens": 15798,
+      "cachedTokens": 328832,
+      "reasoningTokens": 11310,
+      "cacheHitRate": 0.7568,
+      "runMessage": "主题已改成绿色，功能和版式都没动。\n\n现在的绿：底色是淡苔绿的纸面，上面那层制图网格随之变深；墨色换成深松绿的黑，栏头看起来像一块深绿漆过的木牌；唯一的强调色由砖红改成深林绿，只出现在「加入」按钮、勾销时的划线和空状态的角标上；输入写错时的底色、勾销行的底纹、新登记时的一瞬高亮，投影也全部并到同一色系，没有残留的暖调。\n\n刚才把常用路径都走了一遍验证：空内容提交会提示先写点什么、正常登记后未完成读数变 1、写重复的条目会指出它已是第 01 条、勾销后已完成计数变 1、清除已完成会浮出可撤销的提示、撤销后记录回来。预览没有报错，没有遮挡、没有超宽，文字也都能看清。",
+      "judgment": {
+        "caseId": "modify-theme",
+        "title": "修改主题",
+        "suite": "legacy",
+        "runId": "e98b42c0-1176-463f-8f64-e414443dd4c6",
+        "passed": true,
+        "checks": [
+          {
+            "type": "artifact",
+            "passed": true
+          },
+          {
+            "type": "terminal",
+            "passed": true
+          },
+          {
+            "type": "project",
+            "passed": true
+          },
+          {
+            "type": "modified",
+            "passed": true
+          },
+          {
+            "type": "isolation",
+            "passed": true
+          }
+        ],
+        "failures": [],
+        "artifactEndpoint": "/test/runs/e98b42c0-1176-463f-8f64-e414443dd4c6"
+      },
+      "passed": true,
+      "failures": [],
+      "artifact": "/test/runs/e98b42c0-1176-463f-8f64-e414443dd4c6",
+      "elapsedSeconds": 526.5,
+      "attempt": 1
+    },
+    {
+      "caseId": "provider-fallback",
+      "title": "Provider 降级",
+      "suite": "legacy",
+      "category": "fallback",
+      "runId": "ba5f5d10-cd0d-49ec-b857-6fac929bb644",
+      "runStatus": "failed",
+      "model": "deepseek-flash",
+      "modelAttempts": 1,
+      "promptTokens": null,
+      "completionTokens": null,
+      "cachedTokens": null,
+      "reasoningTokens": null,
+      "cacheHitRate": null,
+      "runMessage": "模型请求失败：注入的 connection_error 故障：模型服务不可用。。草稿已保留，未执行模拟替代。",
+      "judgment": {
+        "caseId": "provider-fallback",
+        "title": "Provider 降级",
+        "suite": "legacy",
+        "runId": "ba5f5d10-cd0d-49ec-b857-6fac929bb644",
+        "passed": true,
+        "checks": [
+          {
+            "type": "artifact",
+            "passed": true
+          },
+          {
+            "type": "terminal",
+            "passed": true
+          },
+          {
+            "type": "noProject",
+            "passed": true
+          },
+          {
+            "type": "isolation",
+            "passed": true
+          }
+        ],
+        "failures": [],
+        "artifactEndpoint": "/test/runs/ba5f5d10-cd0d-49ec-b857-6fac929bb644"
+      },
+      "passed": true,
+      "failures": [],
+      "artifact": "/test/runs/ba5f5d10-cd0d-49ec-b857-6fac929bb644",
+      "elapsedSeconds": 1.6,
+      "attempt": 1
+    },
+    {
+      "caseId": "unsupported-camera",
+      "title": "拒绝相机",
+      "suite": "legacy",
+      "category": "boundary",
+      "runId": "6cc8f26f-5727-4a93-a180-ceca8a2a5224",
+      "runStatus": "completed",
+      "model": "deepseek-flash",
+      "modelAttempts": 29,
+      "promptTokens": 1424617,
+      "completionTokens": 68847,
+      "cachedTokens": 1288448,
+      "reasoningTokens": 52534,
+      "cacheHitRate": 0.9044,
+      "runMessage": "先说一句实话：这个环境里我拿不到摄像头，也没有服务器能接收上传，所以「拍照上传」的后半段我没法做真。我把能做实的部分做完了，做成一本现场照片册：照片从系统选择器里取（手机上那个选择器本身就带拍照入口），取回来之后的一切都是真的——登记、入册、复核、备注、删除与撤销。\n\n用起来是这样：\n- 底部登记条是唯一的入口。写上点位（比如「3号墩东侧」），想配照片就点「照片」从选择器里挑一张，再按「登记入册」；先立点位、照片回头补也可以，这种条目会以虚线空框标着「待补照片」，点开就能补。\n- 入册后是一面双列印样墙，每格底下带序号、时间、点位和复核状态。点任意一格打开：大图、现场备注、标记已复核、删除这一条。核过的条目上会盖一枚「已复核」的环形戳，空册那格盖的是「未登记」。\n- 删除不是终局，底部会浮出「已删除 № 00X」，点撤销就放回原位。顶部三格读数（登记／待复核／待补）和筛选（全部／待复核／待补照片）随时能对上账。\n- 记录会留在册子里，关掉再打开还在；一次能存六十条，满了或存放空间不够会直接说清楚，不会悄悄丢东西。\n\n版面上它是一本暗房联系印样：深炭灰的暗底，等宽字体管所有编号与时间，安全琥珀是唯一的行动色，绿松只表示「已复核」这一种状态；页首一条胶片齿孔带，每张照片带裁切角标。\n\n预览跑过了：空点位会拦住、两条登记入册、重复空提交会再次提示、筛选切换的数量、打开详情、标记复核、保存备注、删除后撤销放回，逐条都断言过，没有遮挡、没有超宽、没有点不到的小按钮，文字也都在可读范围内。素材库是空的，所以相册里没有预置照片——这本来就是你自己的现场图。",
+      "judgment": {
+        "caseId": "unsupported-camera",
+        "title": "拒绝相机",
+        "suite": "legacy",
+        "runId": "6cc8f26f-5727-4a93-a180-ceca8a2a5224",
+        "passed": true,
+        "checks": [
+          {
+            "type": "artifact",
+            "passed": true
+          },
+          {
+            "type": "terminal",
+            "passed": true
+          },
+          {
+            "type": "isolation",
+            "passed": true
+          }
+        ],
+        "failures": [],
+        "artifactEndpoint": "/test/runs/6cc8f26f-5727-4a93-a180-ceca8a2a5224"
+      },
+      "passed": true,
+      "failures": [],
+      "artifact": "/test/runs/6cc8f26f-5727-4a93-a180-ceca8a2a5224",
+      "elapsedSeconds": 465.6,
+      "attempt": 1
+    },
+    {
+      "caseId": "empty-request",
+      "title": "空请求",
+      "suite": "legacy",
+      "category": "input",
+      "runId": "84a89ab8-e93f-406d-8f85-6950cf4e614e",
+      "runStatus": "completed",
+      "model": "deepseek-flash",
+      "modelAttempts": 0,
+      "promptTokens": null,
+      "completionTokens": null,
+      "cachedTokens": null,
+      "reasoningTokens": null,
+      "cacheHitRate": null,
+      "runMessage": "为了避免误操作，当前请求暂未执行：缺少可理解的用户目标。",
+      "judgment": {
+        "caseId": "empty-request",
+        "title": "空请求",
+        "suite": "legacy",
+        "runId": "84a89ab8-e93f-406d-8f85-6950cf4e614e",
+        "passed": true,
+        "checks": [
+          {
+            "type": "artifact",
+            "passed": true
+          },
+          {
+            "type": "terminal",
+            "passed": true
+          },
+          {
+            "type": "noProject",
+            "passed": true
+          },
+          {
+            "type": "isolation",
+            "passed": true
+          }
+        ],
+        "failures": [],
+        "artifactEndpoint": "/test/runs/84a89ab8-e93f-406d-8f85-6950cf4e614e"
+      },
+      "passed": true,
+      "failures": [],
+      "artifact": "/test/runs/84a89ab8-e93f-406d-8f85-6950cf4e614e",
+      "elapsedSeconds": 1.5,
+      "attempt": 1
+    },
+    {
+      "caseId": "create-checklist",
+      "title": "创建清单",
+      "suite": "legacy",
+      "category": "creation",
+      "runId": "6d68998b-fccc-4c57-8e67-e231fb5f8dcc",
+      "runStatus": "completed",
+      "model": "deepseek-flash",
+      "modelAttempts": 22,
+      "promptTokens": 870364,
+      "completionTokens": 53826,
+      "cachedTokens": 758528,
+      "reasoningTokens": 34688,
+      "cacheHitRate": 0.8715,
+      "runMessage": "「行李票」做好了，是一份旅行物品清单，打开就能用。\n\n一张深墨色的票据：衬线大字的标题，编号与读数用等宽数字，配色只有深墨、黄铜、骨白三种，全是硬边直角，靠细线和菱形标记分隔章节。最上面那条阶梯状的黄铜短柱是装箱进度，每根对应一件东西，装满就点亮；下面三枚圆形读数章是总条目、已装箱、待装箱。\n\n用法：\n- 顶部登记栏一直贴在屏幕上方，滚到哪都在。写下名字、选个归类（衣物／洗漱／证件／其他），按「加入」就登记进对应分组。\n- 点条目左边方框＝装箱，名字划掉、方框亮起；点右边叉号＝删除。\n- 删完登记栏里会浮出「已删除……撤销」，点一下原样放回。\n- 分组标题可点击折叠，右边数字是这组几件；下方三张票根按全部／待装箱／已装箱筛选，各带数量。\n- 没写名字、名字超长、同一归类里重名，都会被拦住并说明原因。记录留在票里，下次打开还在。首次打开预置了几件常见物品，随便删改。\n\n预览跑过完整一轮：新增、勾选、折叠、切筛选、删除后撤销、空输入拦截，18 条断言全通过；没有被遮挡的条目，没有横向溢出，没有点不中的小按钮，文字也都在清晰范围内。素材库是空的，所以没有任何配图，视觉全靠排版与线框本身。",
+      "judgment": {
+        "caseId": "create-checklist",
+        "title": "创建清单",
+        "suite": "legacy",
+        "runId": "6d68998b-fccc-4c57-8e67-e231fb5f8dcc",
+        "passed": true,
+        "checks": [
+          {
+            "type": "artifact",
+            "passed": true
+          },
+          {
+            "type": "terminal",
+            "passed": true
+          },
+          {
+            "type": "project",
+            "passed": true
+          },
+          {
+            "type": "interaction",
+            "passed": true
+          },
+          {
+            "type": "tools",
+            "passed": true
+          },
+          {
+            "type": "controls",
+            "passed": true
+          },
+          {
+            "type": "isolation",
+            "passed": true
+          }
+        ],
+        "failures": [],
+        "artifactEndpoint": "/test/runs/6d68998b-fccc-4c57-8e67-e231fb5f8dcc"
+      },
+      "passed": true,
+      "failures": [],
+      "artifact": "/test/runs/6d68998b-fccc-4c57-8e67-e231fb5f8dcc",
+      "elapsedSeconds": 364.7,
+      "attempt": 2
+    },
+    {
+      "caseId": "create-multipage",
+      "title": "创建多页面应用",
+      "suite": "legacy",
+      "category": "creation",
+      "runId": "37d6f95d-8274-48e9-a9de-93eb2eace8ad",
+      "runStatus": "completed",
+      "model": "deepseek-flash",
+      "modelAttempts": 37,
+      "promptTokens": 1846788,
+      "completionTokens": 79625,
+      "cachedTokens": 1702144,
+      "reasoningTokens": 55827,
+      "cacheHitRate": 0.9217,
+      "runMessage": "「读册」做好了：一本三页的本地读书记录，底部三个标签是书架、记录、我的。\n\n它长什么样：纸灰底、墨黑与骨白、一条氧化红只用在「在读」这件事上。标题用大字号无衬线，书名用衬线，编号、页数、时间这些读数全部用等宽数字；全直角、发丝分隔线，没有卡片阴影。标志性的细节是每一行目录都带一条页边编号和一条贯穿的左栏竖线，行首还有一根状态色条（在读是红、读完是墨黑、想读是灰）。三个页签做成了卡片盒上的索引舌片，当前那页压着一道红边。\n\n能干什么：\n- 书架：登记书名、作者、总页数、状态；页首三格读数看在册／在读／读完；筛选按状态切；每行可以 +10 页、−10 页、标记读完、删除。最上面那条红边「接着读」会挑出进度最靠前的一本，一键续记 10 页。读完的书行末会显示取消读完，页数走满时自动落成读完。\n- 记录：挑一册书、填页码、写下摘抄或想法，落成一条时间轴条目，最新一条的节点是红的。可以删单条。\n- 我的：在册／读完／读毕页数／台账条数四格读数，年度目标（带进度条与百分比），以及一个可折叠的账本维护，里面是清空台账与重置整本。\n- 该拦的都拦：书名空、页数非整数、同书名重复、记录内容空、页码写着数字但超过这本总页数、目标不是 1 到 999，都会当场说明原因。删除和清空都要按两下才执行。数据会留在册子里，下次打开接着用；存放空间不够时会直接告诉你，不会悄悄丢东西。首次打开预置了三册书和一条记录，随便改删。\n\n验证：分三轮跑了完整交互，书架链路（空书名拦截、登记新书、切筛选、续读、改进度、标记读完、删除二次确认）、记录链路（写条目、空内容拦截、删除二次确认）、我的链路（存目标、展开维护、清空二次确认）逐条断言都通过；没有被遮挡的条目、没有横向溢出、没有点不中的小按钮，文字也都在清晰范围内。\n\n素材库是空的，所以册子里没有任何配图，视觉全部由排版、编号和线条撑起来；要放自己的书影或照片，把",
+      "judgment": {
+        "caseId": "create-multipage",
+        "title": "创建多页面应用",
+        "suite": "legacy",
+        "runId": "37d6f95d-8274-48e9-a9de-93eb2eace8ad",
+        "passed": true,
+        "checks": [
+          {
+            "type": "artifact",
+            "passed": true
+          },
+          {
+            "type": "terminal",
+            "passed": true
+          },
+          {
+            "type": "project",
+            "passed": true
+          },
+          {
+            "type": "interaction",
+            "passed": true
+          },
+          {
+            "type": "projectContains",
+            "passed": true
+          },
+          {
+            "type": "boundary",
+            "passed": true
+          },
+          {
+            "type": "isolation",
+            "passed": true
+          }
+        ],
+        "failures": [],
+        "artifactEndpoint": "/test/runs/37d6f95d-8274-48e9-a9de-93eb2eace8ad"
+      },
+      "passed": true,
+      "failures": [],
+      "artifact": "/test/runs/37d6f95d-8274-48e9-a9de-93eb2eace8ad",
+      "elapsedSeconds": 924.9,
+      "attempt": 2
+    },
+    {
+      "caseId": "modify-theme",
+      "title": "修改主题",
+      "suite": "legacy",
+      "category": "modification",
+      "setupRunId": "5dd291e0-c52a-4362-a5b3-8d337879eb02",
+      "setupRunStatus": "completed",
+      "runId": "39a69b16-a7b7-49d6-882d-b109ad7b6213",
+      "runStatus": "completed",
+      "model": "deepseek-flash",
+      "modelAttempts": 32,
+      "promptTokens": 788367,
+      "completionTokens": 23495,
+      "cachedTokens": 578688,
+      "reasoningTokens": 18446,
+      "cacheHitRate": 0.734,
+      "runMessage": "主题换成绿色了，其余功能和布局都没动。\n\n具体改了什么：顶部整块报头从原来的亮黄改成深松林绿，报头里的标题、没做完的件数、完成率这些字全部换成骨白色，在深绿底上依然清楚；报头下缘压了一道细的嫩叶绿边线，从输入块两侧露出来。进度条现在是一条嫩叶绿的生长条，在深绿底和半透明的浅色轨道上很跳。\n\n亮绿这一支只用在「记号」上：勾选框被填满时是嫩叶绿加一笔深色对勾，勾掉后横扫过字面的高亮是嫩叶绿，输入块下面那块错位色块、撤销按钮、删除残根行里被强调的「书名引号」也都是同一个绿。文字部分没有第三种绿插进来：正文墨色改成带绿调的近黑，说明文字是绿灰，已划掉的行用更暗的绿灰。\n\n浏览器状态栏的主题色也一并换成了这道深绿。素材库还是空的，所以没有任何配图，绿色全靠色块与线条本身表达。\n\n预览跑了一整轮：初始读数、勾掉一件、写下新条目、切到「待办」筛选、删除后就地撤销、再切回全部、空输入拦截，共 17 条断言全部通过；没有被遮挡的条目，没有横向溢出，没有点不中的小按钮，文字都在清晰范围内。",
+      "judgment": {
+        "caseId": "modify-theme",
+        "title": "修改主题",
+        "suite": "legacy",
+        "runId": "39a69b16-a7b7-49d6-882d-b109ad7b6213",
+        "passed": true,
+        "checks": [
+          {
+            "type": "artifact",
+            "passed": true
+          },
+          {
+            "type": "terminal",
+            "passed": true
+          },
+          {
+            "type": "project",
+            "passed": true
+          },
+          {
+            "type": "modified",
+            "passed": true
+          },
+          {
+            "type": "isolation",
+            "passed": true
+          }
+        ],
+        "failures": [],
+        "artifactEndpoint": "/test/runs/39a69b16-a7b7-49d6-882d-b109ad7b6213"
+      },
+      "passed": true,
+      "failures": [],
+      "artifact": "/test/runs/39a69b16-a7b7-49d6-882d-b109ad7b6213",
+      "elapsedSeconds": 532.1,
+      "attempt": 2
+    },
+    {
+      "caseId": "provider-fallback",
+      "title": "Provider 降级",
+      "suite": "legacy",
+      "category": "fallback",
+      "runId": "d397d54f-fcf2-41fa-828d-e9ec4550606f",
+      "runStatus": "failed",
+      "model": "deepseek-flash",
+      "modelAttempts": 1,
+      "promptTokens": null,
+      "completionTokens": null,
+      "cachedTokens": null,
+      "reasoningTokens": null,
+      "cacheHitRate": null,
+      "runMessage": "模型请求失败：注入的 connection_error 故障：模型服务不可用。。草稿已保留，未执行模拟替代。",
+      "judgment": {
+        "caseId": "provider-fallback",
+        "title": "Provider 降级",
+        "suite": "legacy",
+        "runId": "d397d54f-fcf2-41fa-828d-e9ec4550606f",
+        "passed": true,
+        "checks": [
+          {
+            "type": "artifact",
+            "passed": true
+          },
+          {
+            "type": "terminal",
+            "passed": true
+          },
+          {
+            "type": "noProject",
+            "passed": true
+          },
+          {
+            "type": "isolation",
+            "passed": true
+          }
+        ],
+        "failures": [],
+        "artifactEndpoint": "/test/runs/d397d54f-fcf2-41fa-828d-e9ec4550606f"
+      },
+      "passed": true,
+      "failures": [],
+      "artifact": "/test/runs/d397d54f-fcf2-41fa-828d-e9ec4550606f",
+      "elapsedSeconds": 1.6,
+      "attempt": 2
+    },
+    {
+      "caseId": "unsupported-camera",
+      "title": "拒绝相机",
+      "suite": "legacy",
+      "category": "boundary",
+      "runId": "5466a200-8b94-4b3c-927b-2005e10ce1a0",
+      "runStatus": "completed",
+      "model": "deepseek-flash",
+      "modelAttempts": 22,
+      "promptTokens": 805854,
+      "completionTokens": 39799,
+      "cachedTokens": 715136,
+      "reasoningTokens": 24621,
+      "cacheHitRate": 0.8874,
+      "runMessage": "先说一件必须说清楚的事：这个小程序拿不到相机，也不能读写相册文件或联网，所以我没做「点一下拍照然后上传」的假按钮——那只会是个点了没反应的壳。我做成的是一张真能在现场用起来的现场影像点位表：**拍那张照片的动作发生在相机里，回到这里负责把每一处要拍的位置逐条登记清楚、并且证明哪几张拍过了。**\n\n它长什么样：石墨色的仪表盘质感，细到发丝的分隔线，编号、读数、时间一律用等宽数字排版，标题和按钮是无衬线粗体。颜色只承担两件事——青色代表「已记录」，橙色只代表「需重拍」，别的地方不用彩色。最上面是常驻的仪表条：当前任务、三格读数（点位／已记／待重拍）、一条穿孔刻度尺（一格一个点位，记完就亮青），最下面一行是动作记录，每次操作都会留下编号和一句话。下面是两列影像位取景框，每格有四角裁切标、大号点位编号，记过的格子会浮起斜纹。\n\n怎么用：\n- 点任意一格影像位，登记台就展开，选「已拍·合格／需重拍／没拍到」即刻记入时间，读数、刻度尺、格子状态同步变。\n- 登记台里可以给它写备注（例如「逆光，下次带补光板」），备注会显示在格子上；「清零这条」退回待拍，「删除点位」移除这格，两者都要连按两下才动手。\n- 可以给不同现场建多张单子（任务名、地点、日期），顶部胶囊标签之间切换，每个标签上写着这一单的完成比例。新开的单子空格子会给出「填入常用点位」，一键铺入 8 个常见现场点位再按实际删改。\n- 拦住的情况：位置描述空着、超过 24 字、同一单里已有同名点位；任务名空着、超过 16 字、跟已有任务重名，都会当场说明原因。\n- 记录留在本机，下次打开接着用。\n\n验证跑了一整轮真实交互：开登记台、记为已拍、写备注、记为没拍到、清零二次确认、删除点位、建新任务看到空状态、一键填入常用点位、切回旧单，共 35 条断言全部通过；没有被遮挡或点不中的东西，没有横向溢出，文字都在清晰范围内。\n\n素材库现在是",
+      "judgment": {
+        "caseId": "unsupported-camera",
+        "title": "拒绝相机",
+        "suite": "legacy",
+        "runId": "5466a200-8b94-4b3c-927b-2005e10ce1a0",
+        "passed": true,
+        "checks": [
+          {
+            "type": "artifact",
+            "passed": true
+          },
+          {
+            "type": "terminal",
+            "passed": true
+          },
+          {
+            "type": "isolation",
+            "passed": true
+          }
+        ],
+        "failures": [],
+        "artifactEndpoint": "/test/runs/5466a200-8b94-4b3c-927b-2005e10ce1a0"
+      },
+      "passed": true,
+      "failures": [],
+      "artifact": "/test/runs/5466a200-8b94-4b3c-927b-2005e10ce1a0",
+      "elapsedSeconds": 248.8,
+      "attempt": 2
+    },
+    {
+      "caseId": "empty-request",
+      "title": "空请求",
+      "suite": "legacy",
+      "category": "input",
+      "runId": "d0f37fff-fe46-4452-93ad-06847563c109",
+      "runStatus": "completed",
+      "model": "deepseek-flash",
+      "modelAttempts": 0,
+      "promptTokens": null,
+      "completionTokens": null,
+      "cachedTokens": null,
+      "reasoningTokens": null,
+      "cacheHitRate": null,
+      "runMessage": "为了避免误操作，当前请求暂未执行：缺少可理解的用户目标。",
+      "judgment": {
+        "caseId": "empty-request",
+        "title": "空请求",
+        "suite": "legacy",
+        "runId": "d0f37fff-fe46-4452-93ad-06847563c109",
+        "passed": true,
+        "checks": [
+          {
+            "type": "artifact",
+            "passed": true
+          },
+          {
+            "type": "terminal",
+            "passed": true
+          },
+          {
+            "type": "noProject",
+            "passed": true
+          },
+          {
+            "type": "isolation",
+            "passed": true
+          }
+        ],
+        "failures": [],
+        "artifactEndpoint": "/test/runs/d0f37fff-fe46-4452-93ad-06847563c109"
+      },
+      "passed": true,
+      "failures": [],
+      "artifact": "/test/runs/d0f37fff-fe46-4452-93ad-06847563c109",
+      "elapsedSeconds": 1.4,
+      "attempt": 2
+    },
+    {
+      "caseId": "create-checklist",
+      "title": "创建清单",
+      "suite": "legacy",
+      "category": "creation",
+      "runId": "d7fb8f4b-e3da-49fb-8815-8f62e935cd42",
+      "runStatus": "completed",
+      "model": "deepseek-flash",
+      "modelAttempts": 29,
+      "promptTokens": 1267488,
+      "completionTokens": 56550,
+      "cachedTokens": 1061632,
+      "reasoningTokens": 37538,
+      "cacheHitRate": 0.8376,
+      "runMessage": "「行前装箱单」做好了，是一份能一直用下去的旅行物品清单。\n\n长相取自上世纪远洋航线海报上的装箱舱单：深墨蓝纸面、铜金细线与双线框版心，标题是宽字距字样，全页硬边直角。最抢眼的是报头那枚铜金圆牌，写着还差几件没装；下面一条分格的装载尺，装一件亮一格。清单按类别分成 01 证件与票务、02 衣物、03 洗漱与护肤等段落，每段标题右边跑一道阶梯折线饰纹，标题点一下能整段折起来，折过哪几段下次打开还记着。\n\n每一行是勾选框、名称、删除三栏并排：勾选框是铜金方框，装好了就填满、里面亮起一枚小菱形，一条铜金细线把名字划掉，行左浮起一道铜金边条。顶部可以写上这趟去哪儿和出发日期。\n\n怎么用：\n- 写下要装的东西，挑个类别（证件／衣物／洗漱／电子／药品／杂物），按「装入清单」或回车。\n- 点方框＝装好了，再点一次＝改回待装。\n- 点叉＝移出清单，原地立刻出现一条带红边的提示写着「已移出清单「晕车药」」，按「撤销」原样放回，它自己会收走不一直挡着。\n- 上面三格筛选（全部／未装／已装）各带数量，点一下只看那一类。\n- 页脚三格读数是「在册／已装／待装」，「清除已装」要连按两次才动手，旁边小字会告诉你还差一下；没有已装的东西时它会直说。\n- 该拦的都拦：空着点加入会提示先写点东西，标题左右抖一下；同名的不给加，会指名说清单里已经有了。清单清空后出现「铺入常备行装（9 件）」一键起步。\n- 记录留在设备上，下次打开接着用；万一存不下会直接讲明，不会悄悄丢东西。\n\n验证跑了完整一轮真实点击：勾选改读数、新增计数、按类别添加、删除后就地撤销、连按两次清除已装、空输入拦截、重名拦截、切到已装看到空状态、切回未装核对数量、类别折叠再展开，共 30 条断言全部通过；没有被遮挡或点不中的东西，没有横向溢出，文字都在清晰范围内。素材库是空的，所以没有配图，视觉全靠色块、线条与排版撑起来。",
+      "judgment": {
+        "caseId": "create-checklist",
+        "title": "创建清单",
+        "suite": "legacy",
+        "runId": "d7fb8f4b-e3da-49fb-8815-8f62e935cd42",
+        "passed": true,
+        "checks": [
+          {
+            "type": "artifact",
+            "passed": true
+          },
+          {
+            "type": "terminal",
+            "passed": true
+          },
+          {
+            "type": "project",
+            "passed": true
+          },
+          {
+            "type": "interaction",
+            "passed": true
+          },
+          {
+            "type": "tools",
+            "passed": true
+          },
+          {
+            "type": "controls",
+            "passed": true
+          },
+          {
+            "type": "isolation",
+            "passed": true
+          }
+        ],
+        "failures": [],
+        "artifactEndpoint": "/test/runs/d7fb8f4b-e3da-49fb-8815-8f62e935cd42"
+      },
+      "passed": true,
+      "failures": [],
+      "artifact": "/test/runs/d7fb8f4b-e3da-49fb-8815-8f62e935cd42",
+      "elapsedSeconds": 359.9,
+      "attempt": 3
+    },
+    {
+      "caseId": "create-multipage",
+      "title": "创建多页面应用",
+      "suite": "legacy",
+      "category": "creation",
+      "runId": "d51212e0-56f9-4844-aaa7-8abc14e52594",
+      "runStatus": "completed",
+      "model": "deepseek-flash",
+      "modelAttempts": 34,
+      "promptTokens": 1592539,
+      "completionTokens": 68013,
+      "cachedTokens": 1435008,
+      "reasoningTokens": 38700,
+      "cacheHitRate": 0.9011,
+      "runMessage": "「阅读登记簿」做好了，一个能长期用下去的三页读书记录本：书架、记录、我的。\n\n它长得像图书馆的借阅登记簿：冷灰的纸面、近黑的墨色、细到发丝的分隔线，书名和摘录用衬线排，页数、日期、读数一律等宽数字对齐。整页只有一种信号色（深松青）代表进度和在读，读完的书改成墨色实心并盖上一枚方形小印。报头是一条墨色横带压一道青边，右侧一枚圆形藏书印，里面的数字就是正在读的本数。\n\n最抢眼的细节在书架上：每本书左边有一道细细的「书脊」，脊里的墨色高度就是这本书读了百分之多少，下面还有一条分成十格的刻度；读满时整条脊被填满、书名划上一道细线、右下角盖上「已读毕」。不是卡片墙，每一行都是上下细线分隔的登记行。\n\n怎么用：\n- 书架：写书名（作者、总页数可不填）就能上架；同名、空书名、页数写成 0 都会当场说明原因。三格读数是在册、已读毕、累计页数，下面三格筛选可以只看在读或已读毕。\n- 点任意一行展开这一本的动作栏：顺手记 10 页、按一个页数登记、标记或退回已读毕、移出书架（要连点两次，「移出」会把这本书的条目一起删掉，误点了还能在列表顶部按撤销放回来）。\n- 记录：选一本书、写页数、确认日期、随手写一句读到哪，就存成一条登记；下面按日期分组显示，每天头上有当天的合计页数。每条右侧的删除会立刻在原地留一条撤销条，按撤销就回来了。\n- 我的：三格读数是在册册数、累计页数、登记天数；近七日一根根小柱子显示每天读了多少页，今天那根是墨色的；每天读多少页的目标也在这一页改，改完立刻和今日进度对上。\n- 「清空全部记录」也要连点两次，旁边会写清还差一下和清空后的后果；一本书都没有、一条登记都没有的时候，页面会直说下一步该做什么。\n\n验证跑了两轮真实点击：加书、展开书目行、按页数登记、切到记录写一条带备注的登记、删除后原地撤销、切到我的核对累计页数、改每日目标、连点两次清空、清空后的空状态、还有各种会被拦",
+      "judgment": {
+        "caseId": "create-multipage",
+        "title": "创建多页面应用",
+        "suite": "legacy",
+        "runId": "d51212e0-56f9-4844-aaa7-8abc14e52594",
+        "passed": true,
+        "checks": [
+          {
+            "type": "artifact",
+            "passed": true
+          },
+          {
+            "type": "terminal",
+            "passed": true
+          },
+          {
+            "type": "project",
+            "passed": true
+          },
+          {
+            "type": "interaction",
+            "passed": true
+          },
+          {
+            "type": "projectContains",
+            "passed": true
+          },
+          {
+            "type": "boundary",
+            "passed": true
+          },
+          {
+            "type": "isolation",
+            "passed": true
+          }
+        ],
+        "failures": [],
+        "artifactEndpoint": "/test/runs/d51212e0-56f9-4844-aaa7-8abc14e52594"
+      },
+      "passed": true,
+      "failures": [],
+      "artifact": "/test/runs/d51212e0-56f9-4844-aaa7-8abc14e52594",
+      "elapsedSeconds": 642.2,
+      "attempt": 3
+    },
+    {
+      "caseId": "modify-theme",
+      "title": "修改主题",
+      "suite": "legacy",
+      "category": "modification",
+      "setupRunId": "3cf84627-a162-4cee-8b01-13574c714b63",
+      "setupRunStatus": "completed",
+      "runId": "64625d4f-e2dc-4fcf-ac19-bb11fa3fd674",
+      "runStatus": "completed",
+      "model": "deepseek-flash",
+      "modelAttempts": 17,
+      "promptTokens": 302125,
+      "completionTokens": 18549,
+      "cachedTokens": 193152,
+      "reasoningTokens": 12151,
+      "cacheHitRate": 0.6393,
+      "runMessage": "「待办本」换成了绿色的一套皮。\n\n纸面是旧绿账本纸的色，输入框和纸条底色跟着带一层淡绿，不再是纯白。字与线用带绿味的深墨，发丝般的分隔线也是它。凡是大块实心的地方——顶上那条报头带、已完成那一段的头、主按钮、按下去的按钮、选中的筛选格、勾好的方块——统一填深松绿，所以绿色第一眼就成立，不是靠零散色块凑出来的。亮酸绿只留作信号：重要标记上的斜纹、勾里那个勾、按下去的一瞬。页脚收尾那道斜纹和报头那道是同一花纹的正反两版，一开一合把整页框住。\n\n原来的骨架和用法一点没变：巨号的「还剩几件」读数、三格筛选、硬边直角的区块配胶囊按钮、撕口纸条式的提示与二次确认都在原处；写一条记下、点方块划掉、点 × 撕掉再放回去、筛选和连按两次清掉已完成，全照旧。\n\n验证跑了一整轮真实点击：记下一条看读数变 1、标重要后筛选里只剩一条、点 × 撕下再放回去、划掉后还剩变 0、切到已完成看到那一条、空着点「记下」被拦住，共 20 项检查全部通过；没有被遮挡或点不中的地方，没有横向溢出，文字都在清晰范围内。",
+      "judgment": {
+        "caseId": "modify-theme",
+        "title": "修改主题",
+        "suite": "legacy",
+        "runId": "64625d4f-e2dc-4fcf-ac19-bb11fa3fd674",
+        "passed": true,
+        "checks": [
+          {
+            "type": "artifact",
+            "passed": true
+          },
+          {
+            "type": "terminal",
+            "passed": true
+          },
+          {
+            "type": "project",
+            "passed": true
+          },
+          {
+            "type": "modified",
+            "passed": true
+          },
+          {
+            "type": "isolation",
+            "passed": true
+          }
+        ],
+        "failures": [],
+        "artifactEndpoint": "/test/runs/64625d4f-e2dc-4fcf-ac19-bb11fa3fd674"
+      },
+      "passed": true,
+      "failures": [],
+      "artifact": "/test/runs/64625d4f-e2dc-4fcf-ac19-bb11fa3fd674",
+      "elapsedSeconds": 421.3,
+      "attempt": 3
+    },
+    {
+      "caseId": "provider-fallback",
+      "title": "Provider 降级",
+      "suite": "legacy",
+      "category": "fallback",
+      "runId": "bc2fbe98-b044-4c6b-b628-c84f704377f9",
+      "runStatus": "failed",
+      "model": "deepseek-flash",
+      "modelAttempts": 1,
+      "promptTokens": null,
+      "completionTokens": null,
+      "cachedTokens": null,
+      "reasoningTokens": null,
+      "cacheHitRate": null,
+      "runMessage": "模型请求失败：注入的 connection_error 故障：模型服务不可用。。草稿已保留，未执行模拟替代。",
+      "judgment": {
+        "caseId": "provider-fallback",
+        "title": "Provider 降级",
+        "suite": "legacy",
+        "runId": "bc2fbe98-b044-4c6b-b628-c84f704377f9",
+        "passed": true,
+        "checks": [
+          {
+            "type": "artifact",
+            "passed": true
+          },
+          {
+            "type": "terminal",
+            "passed": true
+          },
+          {
+            "type": "noProject",
+            "passed": true
+          },
+          {
+            "type": "isolation",
+            "passed": true
+          }
+        ],
+        "failures": [],
+        "artifactEndpoint": "/test/runs/bc2fbe98-b044-4c6b-b628-c84f704377f9"
+      },
+      "passed": true,
+      "failures": [],
+      "artifact": "/test/runs/bc2fbe98-b044-4c6b-b628-c84f704377f9",
+      "elapsedSeconds": 1.6,
+      "attempt": 3
+    },
+    {
+      "caseId": "unsupported-camera",
+      "title": "拒绝相机",
+      "suite": "legacy",
+      "category": "boundary",
+      "runId": "df476c34-1948-484a-be61-44d090a466b7",
+      "runStatus": "completed",
+      "model": "deepseek-flash",
+      "modelAttempts": 39,
+      "promptTokens": 2402378,
+      "completionTokens": 78701,
+      "cachedTokens": 2268160,
+      "reasoningTokens": 50601,
+      "cacheHitRate": 0.9441,
+      "runMessage": "做好了，叫「现场影像册」：给每个部位建一格，写清位置、选现场照片、贴标签（待复检 / 隐患 / 正常），归档后随时补拍、改标签、标复核。\n\n一件先说清楚的事：这台环境不开放相机，也没有能真正把文件送出去的上传通道，所以我没有做\"点一下就拍照并上传\"。照片是从你设备的相册或文件里选进来，程序把它们压到长边 900 再连同部位、备注、时间一起收进本册。要真按快门、真传到服务器，得在开放相机和联网的环境里另外做；我不想在页面上放一个点了没反应的假快门。\n\n界面走的是工程记录的路子：顶上一条石墨色的规格带，三格数字是格数 / 待复检 / 隐患，下面一根刻度，每建一格就多一根齿，橙齿就是待复检的那几格，空册时它只是一条基线。底下一个圆头橙色按钮是唯一的主动作。最新建的那一格以整幅横条出现，其余排在两列紧凑格里；待复检的格子四角有橙色角标，复核过的盖一个椭圆印章。底下还有一份可折叠的本册汇总，记着格数、照片张数、已复核数量与最近最早建档时间。\n\n用法上：底下橙色按钮开始建档，部位没写会被当场拦下并提示；不选照片也能先存，空格子会标成「待补拍」，回头按清单补齐；四档筛选和关键词查找都在同一屏；点任意一格进详情，可以改标签、写备注、盖章复核，删除是两步确认。\n\n验证跑了两轮真实点击，共 73 项检查全过：建档校验、标签选择、筛选切到空档再回全部、关键词查找、进详情改标签与复核、返回后列表同步、两格并存时的版式、两步删除回到空册，都按预期；没有被遮挡或点不中的地方，也没有文字看不清。唯一没能自动验的是选照片那一步——预览环境里点不出系统的选图窗口，图片读取失败时页面会明确提示换一张，这条得你自己在浏览器里试一次。",
+      "judgment": {
+        "caseId": "unsupported-camera",
+        "title": "拒绝相机",
+        "suite": "legacy",
+        "runId": "df476c34-1948-484a-be61-44d090a466b7",
+        "passed": true,
+        "checks": [
+          {
+            "type": "artifact",
+            "passed": true
+          },
+          {
+            "type": "terminal",
+            "passed": true
+          },
+          {
+            "type": "isolation",
+            "passed": true
+          }
+        ],
+        "failures": [],
+        "artifactEndpoint": "/test/runs/df476c34-1948-484a-be61-44d090a466b7"
+      },
+      "passed": true,
+      "failures": [],
+      "artifact": "/test/runs/df476c34-1948-484a-be61-44d090a466b7",
+      "elapsedSeconds": 581.9,
+      "attempt": 3
+    },
+    {
+      "caseId": "empty-request",
+      "title": "空请求",
+      "suite": "legacy",
+      "category": "input",
+      "runId": "ea920a66-d610-4771-8ba2-8cfd6d06ddc9",
+      "runStatus": "completed",
+      "model": "deepseek-flash",
+      "modelAttempts": 0,
+      "promptTokens": null,
+      "completionTokens": null,
+      "cachedTokens": null,
+      "reasoningTokens": null,
+      "cacheHitRate": null,
+      "runMessage": "为了避免误操作，当前请求暂未执行：缺少可理解的用户目标。",
+      "judgment": {
+        "caseId": "empty-request",
+        "title": "空请求",
+        "suite": "legacy",
+        "runId": "ea920a66-d610-4771-8ba2-8cfd6d06ddc9",
+        "passed": true,
+        "checks": [
+          {
+            "type": "artifact",
+            "passed": true
+          },
+          {
+            "type": "terminal",
+            "passed": true
+          },
+          {
+            "type": "noProject",
+            "passed": true
+          },
+          {
+            "type": "isolation",
+            "passed": true
+          }
+        ],
+        "failures": [],
+        "artifactEndpoint": "/test/runs/ea920a66-d610-4771-8ba2-8cfd6d06ddc9"
+      },
+      "passed": true,
+      "failures": [],
+      "artifact": "/test/runs/ea920a66-d610-4771-8ba2-8cfd6d06ddc9",
+      "elapsedSeconds": 1.4,
+      "attempt": 3
+    }
+  ],
+  "comparison": null
+}

@@ -1,0 +1,250 @@
+{
+  "environment": {
+    "capturedAt": "2026-09-16T12:21:45+08:00",
+    "repoCommit": "ae7b4b50d7d0ff4345916aba35d75c26a589e8f0",
+    "repoDirty": true,
+    "adb": "C:\\Users\\17525\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe",
+    "device": "default",
+    "hostPort": 18765,
+    "androidRelease": "16",
+    "androidSdk": "36",
+    "deviceModel": "PHK110",
+    "apkVersion": "1.0",
+    "stayAwake": true
+  },
+  "models": [
+    "deepseek-flash"
+  ],
+  "totals": {
+    "cases": 3,
+    "evaluated": 3,
+    "passed": 3,
+    "failed": 0,
+    "taskSuccessRate": 1.0,
+    "pendingSkipped": 0,
+    "pendingRuntime": 0
+  },
+  "cost": {
+    "runsWithCacheData": 3,
+    "promptTokens": 5581572,
+    "promptTokensUncached": 240772,
+    "cachedTokens": 5340800,
+    "completionTokens": 211505,
+    "reasoningTokens": 123654,
+    "modelAttempts": 107,
+    "cacheHitRate": 0.9569
+  },
+  "bySuite": {
+    "legacy": {
+      "total": 3,
+      "passed": 3,
+      "passRate": 1.0
+    }
+  },
+  "stability": {
+    "repeats": 3,
+    "cases": 1,
+    "passAt1": 1.0,
+    "passAtK": 1.0,
+    "passPowK": 1.0,
+    "perCase": {
+      "create-multipage": [
+        1,
+        1,
+        1
+      ]
+    }
+  },
+  "skipped": [],
+  "pendingRuntime": [],
+  "results": [
+    {
+      "caseId": "create-multipage",
+      "title": "创建多页面应用",
+      "suite": "legacy",
+      "category": "creation",
+      "runId": "8c2cb7da-c244-4b49-ac7f-9fb2c2256e31",
+      "runStatus": "completed",
+      "model": "deepseek-flash",
+      "modelAttempts": 40,
+      "promptTokens": 1668733,
+      "completionTokens": 62081,
+      "cachedTokens": 1573760,
+      "reasoningTokens": 36775,
+      "cacheHitRate": 0.9431,
+      "runMessage": "已经做出可用版本并交付（已达到本次 40 轮预算 触发降级交付）：阅读台账。**未完成的部分**：已通过一次完整预览验证。 你可以继续追加要求（例如「把没验证的地方修一下」），我会在现有版本上接着做。",
+      "judgment": {
+        "caseId": "create-multipage",
+        "title": "创建多页面应用",
+        "suite": "legacy",
+        "runId": "8c2cb7da-c244-4b49-ac7f-9fb2c2256e31",
+        "passed": true,
+        "checks": [
+          {
+            "type": "artifact",
+            "passed": true
+          },
+          {
+            "type": "terminal",
+            "passed": true
+          },
+          {
+            "type": "project",
+            "passed": true
+          },
+          {
+            "type": "interaction",
+            "passed": true
+          },
+          {
+            "type": "projectContains",
+            "passed": true
+          },
+          {
+            "type": "boundary",
+            "passed": true
+          },
+          {
+            "type": "isolation",
+            "passed": true
+          }
+        ],
+        "failures": [],
+        "artifactEndpoint": "/test/runs/8c2cb7da-c244-4b49-ac7f-9fb2c2256e31"
+      },
+      "passed": true,
+      "failures": [],
+      "artifact": "/test/runs/8c2cb7da-c244-4b49-ac7f-9fb2c2256e31",
+      "elapsedSeconds": 526.2,
+      "attempt": 1
+    },
+    {
+      "caseId": "create-multipage",
+      "title": "创建多页面应用",
+      "suite": "legacy",
+      "category": "creation",
+      "runId": "2da23467-ee71-4f44-9a16-61b58bb944ec",
+      "runStatus": "completed",
+      "model": "deepseek-flash",
+      "modelAttempts": 40,
+      "promptTokens": 2442594,
+      "completionTokens": 84490,
+      "cachedTokens": 2360192,
+      "reasoningTokens": 48357,
+      "cacheHitRate": 0.9663,
+      "runMessage": "已经做出可用版本并交付（已达到本次 40 轮预算 触发降级交付）：阅读台账。**未完成的部分**：**没有通过预览验证**，交互可能有问题。最近一次验证：通过（断言 31 条）。 你可以继续追加要求（例如「把没验证的地方修一下」），我会在现有版本上接着做。",
+      "judgment": {
+        "caseId": "create-multipage",
+        "title": "创建多页面应用",
+        "suite": "legacy",
+        "runId": "2da23467-ee71-4f44-9a16-61b58bb944ec",
+        "passed": true,
+        "checks": [
+          {
+            "type": "artifact",
+            "passed": true
+          },
+          {
+            "type": "terminal",
+            "passed": true
+          },
+          {
+            "type": "project",
+            "passed": true
+          },
+          {
+            "type": "interaction",
+            "passed": true
+          },
+          {
+            "type": "projectContains",
+            "passed": true
+          },
+          {
+            "type": "boundary",
+            "passed": true
+          },
+          {
+            "type": "isolation",
+            "passed": true
+          }
+        ],
+        "failures": [],
+        "artifactEndpoint": "/test/runs/2da23467-ee71-4f44-9a16-61b58bb944ec"
+      },
+      "passed": true,
+      "failures": [],
+      "artifact": "/test/runs/2da23467-ee71-4f44-9a16-61b58bb944ec",
+      "elapsedSeconds": 647.5,
+      "attempt": 2
+    },
+    {
+      "caseId": "create-multipage",
+      "title": "创建多页面应用",
+      "suite": "legacy",
+      "category": "creation",
+      "runId": "a58aa768-ae56-4ae7-b4eb-585c216c6d07",
+      "runStatus": "completed",
+      "model": "deepseek-flash",
+      "modelAttempts": 27,
+      "promptTokens": 1470245,
+      "completionTokens": 64934,
+      "cachedTokens": 1406848,
+      "reasoningTokens": 38522,
+      "cacheHitRate": 0.9569,
+      "runMessage": "「页边记」做好了：三个标签页——书架、记录、我的，数据存在你自己的设备上，关掉再打开还在。\n\n能做的事：\n· 书架：登记书名、作者、总页数，选在读／想读／已读完；顶部一条大数字横带（今天读了多少页、在读几本、读完几本、连续几天），下面「接着读」一条色带提示当前这本，再往下是带序号的表格式书目，点任意一本打开详情：进度刻度、切换状态、记页数、编辑、删除，还能看到这本书最近的记录。空书架有上手三步引导。\n· 记录：本周／本月／全部三个口径的合计、平均每天、有读天数；最近七天柱状图；每日流水按天分组，每条能删掉——删掉会把进度一起回退。也可以直接在这里「记一笔」，选书、填页数、写一句感受、改日期。\n· 我的：称呼、每日目标（填了会校验范围，留空就维持原值）、今日达标进度条、六格统计表、三种状态的书目占比，还有载入三本示例书目试手和清空全部数据（都会先确认）。\n\n视觉上走的是纸面印刷品的路子：衬线体做标题和大数字，无衬线体做正文和控件；纸灰底配墨黑，只用一个深松绿做强调；区块之间用细线分隔而不是一堆圆角卡片；进度用刻度尺式的小格表示，一格一格填上去；序号和日期做成圆形印记。\n\n验证情况：预览跑通了完整主链路——登记新书、记页数、三页切换、筛选、状态切换、删除记录、删除书目、重置与示例数据、目标校验，31 条断言全部通过，没有遮挡、超宽或文字看不清的问题，也没有页面报错。\n\n素材库是空的，所以没有用任何图片或表情符号凑图形，全部靠排版和线条来表达。",
+      "judgment": {
+        "caseId": "create-multipage",
+        "title": "创建多页面应用",
+        "suite": "legacy",
+        "runId": "a58aa768-ae56-4ae7-b4eb-585c216c6d07",
+        "passed": true,
+        "checks": [
+          {
+            "type": "artifact",
+            "passed": true
+          },
+          {
+            "type": "terminal",
+            "passed": true
+          },
+          {
+            "type": "project",
+            "passed": true
+          },
+          {
+            "type": "interaction",
+            "passed": true
+          },
+          {
+            "type": "projectContains",
+            "passed": true
+          },
+          {
+            "type": "boundary",
+            "passed": true
+          },
+          {
+            "type": "isolation",
+            "passed": true
+          }
+        ],
+        "failures": [],
+        "artifactEndpoint": "/test/runs/a58aa768-ae56-4ae7-b4eb-585c216c6d07"
+      },
+      "passed": true,
+      "failures": [],
+      "artifact": "/test/runs/a58aa768-ae56-4ae7-b4eb-585c216c6d07",
+      "elapsedSeconds": 513.9,
+      "attempt": 3
+    }
+  ],
+  "comparison": {
+    "baselineLabel": "2026-09-16T11:12:10+08:00",
+    "newlyFailed": [],
+    "newlyPassed": [],
+    "suiteDeltas": {
+      "legacy": "+0.2222（0.7778 -> 1.0）"
+    }
+  }
+}

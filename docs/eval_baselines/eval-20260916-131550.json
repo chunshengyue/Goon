@@ -1,0 +1,202 @@
+{
+  "environment": {
+    "capturedAt": "2026-09-16T12:55:39+08:00",
+    "repoCommit": "ae7b4b50d7d0ff4345916aba35d75c26a589e8f0",
+    "repoDirty": true,
+    "adb": "C:\\Users\\17525\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe",
+    "device": "default",
+    "hostPort": 18765,
+    "androidRelease": "16",
+    "androidSdk": "36",
+    "deviceModel": "PHK110",
+    "apkVersion": "1.0",
+    "stayAwake": true
+  },
+  "models": [
+    "deepseek-flash"
+  ],
+  "totals": {
+    "cases": 2,
+    "evaluated": 2,
+    "passed": 1,
+    "failed": 1,
+    "taskSuccessRate": 0.5,
+    "pendingSkipped": 0,
+    "pendingRuntime": 0
+  },
+  "cost": {
+    "runsWithCacheData": 2,
+    "promptTokens": 4384215,
+    "promptTokensUncached": 135255,
+    "cachedTokens": 4248960,
+    "completionTokens": 161383,
+    "reasoningTokens": 92885,
+    "modelAttempts": 82,
+    "cacheHitRate": 0.9691
+  },
+  "bySuite": {
+    "legacy": {
+      "total": 2,
+      "passed": 1,
+      "passRate": 0.5
+    }
+  },
+  "stability": {
+    "repeats": 2,
+    "cases": 1,
+    "passAt1": 1.0,
+    "passAtK": 1.0,
+    "passPowK": 0.0,
+    "perCase": {
+      "create-multipage": [
+        1,
+        0
+      ]
+    }
+  },
+  "skipped": [],
+  "pendingRuntime": [],
+  "results": [
+    {
+      "caseId": "create-multipage",
+      "title": "创建多页面应用",
+      "suite": "legacy",
+      "category": "creation",
+      "runId": "d80a06fa-5197-4bee-b15b-49f8c7f50f24",
+      "runStatus": "completed",
+      "model": "deepseek-flash",
+      "modelAttempts": 34,
+      "promptTokens": 2325587,
+      "completionTokens": 97483,
+      "cachedTokens": 2248448,
+      "reasoningTokens": 61004,
+      "cacheHitRate": 0.9668,
+      "runMessage": "「读数」做好了：三个标签页——书架、记录、我的，数据存在你自己的设备上，关掉再打开还在。\n\n能做的事：\n· 书架：登记书名、作者、总页数，状态有想读／在读／读毕。顶部一条四格读数横带（今天读了多少页、在读几本、读毕几本、连着几天），下面一块深色的「接着读」，显示当前这本的进度并直接记页数；再往下是带列头的书目表，点任意一本打开详情：进度、切换状态、记页数、编辑、删除，还能看到这本书最近的记录。空书架有可收起的上手三步。\n· 记录：本周／本月／全部三个口径，合计页数、有读天数、有读日均、记录条数；最近七天柱状图（今天那根是红的）；下方是按天分组的流水，一天一组、可以收起，每条记录都能删掉——删掉会把这本书的进度一起退回。\n· 我的：称呼、每日目标（会校验范围，填错会当场提示），今日目标进度条，六格统计（书目、在读、想读、读毕、记录、累计页数），书目状态占比条，还有载入示例书目和清空全部数据（清空会先确认）。\n\n视觉上走的是瑞士排版加工业读数的路子：等宽字体管所有数字、日期和字段标签，无衬线体管标题正文；纸白底配墨黑，只有一个信号红用于进度、当前标签和危险操作；分隔靠发丝线和留白，不用圆角卡片堆；标志性的细节是刻度尺量条，一格一格地填满，贯穿书目进度、每日目标和记录。\n\n验证情况：四轮预览跑下来都通过。覆盖了登记（含书名空、页数越界的报错）、改状态、记页数、翻页签、按状态筛选、时间范围切换、展开收起日期组、编辑书目、删除记录与书目的确认、载入示例、清空数据，共 107 条断言全过；没有遮挡、没有点击不到的地方、没有文字看不清，也没有页面报错。过程中还查出并修好了一个真问题：确认弹层的删除操作曾被弹层打开动作清空，导致按确认没反应。\n\n素材库是空的，所以没有用任何图片或表情符号充当图形，图形全部由排版、线条和方块构成。\n离线要求已满足：没有联网与文件读取，只用本机存储保存书目和记",
+      "judgment": {
+        "caseId": "create-multipage",
+        "title": "创建多页面应用",
+        "suite": "legacy",
+        "runId": "d80a06fa-5197-4bee-b15b-49f8c7f50f24",
+        "passed": true,
+        "checks": [
+          {
+            "type": "artifact",
+            "passed": true
+          },
+          {
+            "type": "terminal",
+            "passed": true
+          },
+          {
+            "type": "project",
+            "passed": true
+          },
+          {
+            "type": "interaction",
+            "passed": true
+          },
+          {
+            "type": "projectContains",
+            "passed": true
+          },
+          {
+            "type": "boundary",
+            "passed": true
+          },
+          {
+            "type": "isolation",
+            "passed": true
+          }
+        ],
+        "failures": [],
+        "artifactEndpoint": "/test/runs/d80a06fa-5197-4bee-b15b-49f8c7f50f24"
+      },
+      "passed": true,
+      "failures": [],
+      "artifact": "/test/runs/d80a06fa-5197-4bee-b15b-49f8c7f50f24",
+      "elapsedSeconds": 601.6,
+      "attempt": 1
+    },
+    {
+      "caseId": "create-multipage",
+      "title": "创建多页面应用",
+      "suite": "legacy",
+      "category": "creation",
+      "runId": "afb8c415-1d55-47a8-b06d-dbb5c77a5bea",
+      "runStatus": "completed",
+      "model": "deepseek-flash",
+      "modelAttempts": 48,
+      "promptTokens": 2058628,
+      "completionTokens": 63900,
+      "cachedTokens": 2000512,
+      "reasoningTokens": 31881,
+      "cacheHitRate": 0.9718,
+      "runMessage": "已经做出可用版本并交付（已达到本次 48 轮预算（已延长 2 次，额度用尽） 触发降级交付）：读书记录。**未完成的部分**：**没有通过预览验证**，交互可能有问题。最近一次验证：未通过（断言 13 条），问题：1 个可点击元素被其它元素遮挡，用户点不到。layout.blocked 里有各自的 rect 与遮挡者的 rect/position/z-index/pointer-events，按它定位问题：被挡住多半是 z-index 不够、浮层没设 pointer-events，或上方元素铺满了整块区域。。 上次未通过的项：[]|[\"1 个可点击元素被其它元素遮挡，用户点不到。layout.blocked 里有各自的 rect 与遮挡者的 rect\\/position\\/z-index\\/pointer-events，按它定位问题：被挡住多半是 z-index 不够、浮层没设 pointer-events，或上方元素铺满了整块区域。\"]。 你可以继续追加要求（例如「把没验证的地方修一下」），我会在现有版本上接着做。",
+      "judgment": {
+        "caseId": "create-multipage",
+        "title": "创建多页面应用",
+        "suite": "legacy",
+        "runId": "afb8c415-1d55-47a8-b06d-dbb5c77a5bea",
+        "passed": false,
+        "checks": [
+          {
+            "type": "artifact",
+            "passed": true
+          },
+          {
+            "type": "terminal",
+            "passed": true
+          },
+          {
+            "type": "project",
+            "passed": true
+          },
+          {
+            "type": "interaction",
+            "passed": false,
+            "reason": "预览未通过：见 artifact 中的断言明细。"
+          },
+          {
+            "type": "projectContains",
+            "passed": true
+          },
+          {
+            "type": "boundary",
+            "passed": true
+          },
+          {
+            "type": "isolation",
+            "passed": true
+          }
+        ],
+        "failures": [
+          {
+            "type": "interaction",
+            "reason": "预览未通过：见 artifact 中的断言明细。"
+          }
+        ],
+        "artifactEndpoint": "/test/runs/afb8c415-1d55-47a8-b06d-dbb5c77a5bea"
+      },
+      "passed": false,
+      "failures": [
+        {
+          "type": "interaction",
+          "reason": "预览未通过：见 artifact 中的断言明细。"
+        }
+      ],
+      "artifact": "/test/runs/afb8c415-1d55-47a8-b06d-dbb5c77a5bea",
+      "elapsedSeconds": 606.9,
+      "attempt": 2
+    }
+  ],
+  "comparison": {
+    "baselineLabel": "2026-09-16T12:21:45+08:00",
+    "newlyFailed": [
+      "create-multipage"
+    ],
+    "newlyPassed": [],
+    "suiteDeltas": {
+      "legacy": "-0.5000（1.0 -> 0.5）"
+    }
+  }
+}

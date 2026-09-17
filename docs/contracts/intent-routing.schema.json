@@ -1,0 +1,106 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://goon.local/contracts/intent-routing.schema.json",
+  "title": "Goon Intent Routing Contract",
+  "type": "object",
+  "required": ["decision", "policy", "toolValidation"],
+  "properties": {
+    "decision": { "$ref": "#/$defs/decision" },
+    "policy": { "$ref": "#/$defs/policy" },
+    "toolValidation": { "$ref": "#/$defs/toolValidation" }
+  },
+  "additionalProperties": false,
+  "$defs": {
+    "intent": {
+      "enum": ["CHAT", "SEARCH", "CREATE_MINI_APP", "MODIFY_MINI_APP", "INSPECT_MINI_APP", "CLARIFY", "UNKNOWN"]
+    },
+    "risk": { "enum": ["NONE", "READ_ONLY", "WRITE", "DESTRUCTIVE"] },
+    "route": { "enum": ["CHAT", "SEARCH", "WEB_AGENT", "LEGACY_AGENT", "INSPECT", "CLARIFY"] },
+    "task": {
+      "type": "object",
+      "required": ["intent", "entities", "negated", "requiresWrite", "risk", "evidence"],
+      "properties": {
+        "intent": { "$ref": "#/$defs/intent" },
+        "entities": { "type": "object", "additionalProperties": { "type": "string" } },
+        "negated": { "type": "boolean" },
+        "requiresWrite": { "type": "boolean" },
+        "risk": { "$ref": "#/$defs/risk" },
+        "evidence": { "type": "string" }
+      },
+      "additionalProperties": false
+    },
+    "precheck": {
+      "type": "object",
+      "required": ["inputLength", "isEmpty", "unrecognized", "tooLong", "isConsultation", "negatedWrite", "destructive", "promptInjection", "signals"],
+      "properties": {
+        "inputLength": { "type": "integer", "minimum": 0 },
+        "isEmpty": { "type": "boolean" },
+        "unrecognized": { "type": "boolean" },
+        "tooLong": { "type": "boolean" },
+        "isConsultation": { "type": "boolean" },
+        "negatedWrite": { "type": "boolean" },
+        "destructive": { "type": "boolean" },
+        "promptInjection": { "type": "boolean" },
+        "signals": { "type": "array", "items": { "type": "string" }, "uniqueItems": true },
+        "blockedReason": { "type": ["string", "null"] }
+      },
+      "additionalProperties": false
+    },
+    "decision": {
+      "type": "object",
+      "required": ["intent", "confidence", "confidenceKind", "entities", "reason", "tasks", "ambiguities", "requiresConfirmation", "requiresWrite", "isConsultation", "precheck"],
+      "properties": {
+        "intent": { "$ref": "#/$defs/intent" },
+        "confidence": { "type": "number", "minimum": 0, "maximum": 1 },
+        "confidenceKind": { "enum": ["RULE_SIGNAL", "MODEL_ESTIMATE", "CALIBRATED_PROBABILITY"] },
+        "entities": { "type": "object", "additionalProperties": { "type": "string" } },
+        "reason": { "type": "string" },
+        "tasks": { "type": "array", "items": { "$ref": "#/$defs/task" } },
+        "ambiguities": { "type": "array", "items": { "type": "string" } },
+        "requiresConfirmation": { "type": "boolean" },
+        "requiresWrite": { "type": "boolean" },
+        "isConsultation": { "type": "boolean" },
+        "precheck": { "$ref": "#/$defs/precheck" }
+      },
+      "additionalProperties": false
+    },
+    "clarify": {
+      "type": "object",
+      "required": ["question", "missing", "action", "target", "risk", "consequence", "requiredConfirmation", "canResume"],
+      "properties": {
+        "question": { "type": "string" },
+        "missing": { "type": "array", "items": { "type": "string" } },
+        "action": { "type": ["string", "null"] },
+        "target": { "type": ["string", "null"] },
+        "risk": { "$ref": "#/$defs/risk" },
+        "consequence": { "type": "string" },
+        "requiredConfirmation": { "type": "boolean" },
+        "canResume": { "const": false }
+      },
+      "additionalProperties": false
+    },
+    "policy": {
+      "type": "object",
+      "required": ["route", "reason", "safeProjectId", "confirmation", "clarify"],
+      "properties": {
+        "route": { "$ref": "#/$defs/route" },
+        "reason": { "type": "string" },
+        "safeProjectId": { "type": ["string", "null"] },
+        "confirmation": { "type": ["object", "null"] },
+        "clarify": { "oneOf": [{ "$ref": "#/$defs/clarify" }, { "type": "null" }] }
+      },
+      "additionalProperties": false
+    },
+    "toolValidation": {
+      "type": "object",
+      "required": ["allowed", "reason", "route", "tool"],
+      "properties": {
+        "allowed": { "type": "boolean" },
+        "reason": { "type": "string" },
+        "route": { "$ref": "#/$defs/route" },
+        "tool": { "type": "string" }
+      },
+      "additionalProperties": false
+    }
+  }
+}

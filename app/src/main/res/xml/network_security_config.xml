@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  只对本机放行明文 HTTP。
+
+  原因：MCP 服务可能是用户自己在本机跑的一个进程（通过 adb reverse 或同机端口暴露），
+  这类地址只有 http://127.0.0.1:xxxx，走不了 TLS。除此之外一律按平台默认（禁止明文），
+  所以远端 MCP 服务仍然必须是 https —— 这条没有放松。
+-->
+<network-security-config>
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="false">127.0.0.1</domain>
+        <domain includeSubdomains="false">localhost</domain>
+        <domain includeSubdomains="false">::1</domain>
+    </domain-config>
+</network-security-config>

@@ -1,0 +1,626 @@
+{
+  "environment": {
+    "capturedAt": "2026-09-16T11:12:10+08:00",
+    "repoCommit": "ae7b4b50d7d0ff4345916aba35d75c26a589e8f0",
+    "repoDirty": true,
+    "adb": "C:\\Users\\17525\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe",
+    "device": "default",
+    "hostPort": 18765,
+    "androidRelease": "16",
+    "androidSdk": "36",
+    "deviceModel": "PHK110",
+    "apkVersion": "1.0",
+    "stayAwake": true
+  },
+  "models": [
+    "deepseek-flash"
+  ],
+  "totals": {
+    "cases": 9,
+    "evaluated": 9,
+    "passed": 7,
+    "failed": 2,
+    "taskSuccessRate": 0.7778,
+    "pendingSkipped": 0,
+    "pendingRuntime": 0
+  },
+  "cost": {
+    "runsWithCacheData": 9,
+    "promptTokens": 10921389,
+    "promptTokensUncached": 694573,
+    "cachedTokens": 10226816,
+    "completionTokens": 444419,
+    "reasoningTokens": 281607,
+    "modelAttempts": 243,
+    "cacheHitRate": 0.9364
+  },
+  "bySuite": {
+    "legacy": {
+      "total": 9,
+      "passed": 7,
+      "passRate": 0.7778
+    }
+  },
+  "stability": {
+    "repeats": 3,
+    "cases": 3,
+    "passAt1": 0.6667,
+    "passAtK": 1.0,
+    "passPowK": 0.3333,
+    "perCase": {
+      "create-checklist": [
+        1,
+        1,
+        0
+      ],
+      "create-multipage": [
+        0,
+        1,
+        1
+      ],
+      "unsupported-camera": [
+        1,
+        1,
+        1
+      ]
+    }
+  },
+  "skipped": [],
+  "pendingRuntime": [],
+  "results": [
+    {
+      "caseId": "create-checklist",
+      "title": "创建清单",
+      "suite": "legacy",
+      "category": "creation",
+      "runId": "7d3f219f-1e17-4c40-b93d-014201810aac",
+      "runStatus": "completed",
+      "model": "deepseek-flash",
+      "modelAttempts": 12,
+      "promptTokens": 428485,
+      "completionTokens": 45547,
+      "cachedTokens": 342656,
+      "reasoningTokens": 32820,
+      "cacheHitRate": 0.7997,
+      "runMessage": "「行装清单」做好了，打开就是一张能直接改的装箱票：预置了 14 件常见旅行物品，分在证件 / 衣物 / 电子 / 洗护 / 其他五类里。\n\n能做的事：\n· 在上面输入名称、选好归类点「加入」，新物品会出现在对应分组里；写空或重复添加会给出提示，重复时还会把已有的那一条闪一下定位出来。\n· 左侧分类栏可以直接筛，每类后面跟着件数。\n· 点物品左边的方框勾选，勾上的会变暗并划掉；顶部抬头里的分格装载读数和条目 / 已装 / 待装三个数字同步变化，全部勾完时读数会变成「全部装好」。\n· 点右边的叉删掉一件，删除条会出现在下方，点「撤销」就能还原；「清空」会先弹确认，清空后同样可以撤销。\n· 「常备」里是各分类轮着推荐的常用物品，已经加过的不再重复出现，点一下就进清单。\n所有改动都会留在本机，下次打开还是原样。\n\n界面上没走常见的圆角卡片套路：通篇是细线分栏和一张带撕票孔、带分段装载读数的票面抬头，等宽数字只用在读数和计数上，全页只有一个氧化橙用色。素材库是空的，所以勾选框、删除和加号这几个标记是我手画的几何线条，没有用表情符号凑。\n\n预览里把添加、勾选、删除、撤销、切换分类、清空确认、空清单提示、以及写空和重名两条出错路径都实际点过一遍，没有遮挡、超宽或看不清的文字。",
+      "judgment": {
+        "caseId": "create-checklist",
+        "title": "创建清单",
+        "suite": "legacy",
+        "runId": "7d3f219f-1e17-4c40-b93d-014201810aac",
+        "passed": true,
+        "checks": [
+          {
+            "type": "artifact",
+            "passed": true
+          },
+          {
+            "type": "terminal",
+            "passed": true
+          },
+          {
+            "type": "project",
+            "passed": true
+          },
+          {
+            "type": "interaction",
+            "passed": true
+          },
+          {
+            "type": "tools",
+            "passed": true
+          },
+          {
+            "type": "controls",
+            "passed": true
+          },
+          {
+            "type": "isolation",
+            "passed": true
+          }
+        ],
+        "failures": [],
+        "artifactEndpoint": "/test/runs/7d3f219f-1e17-4c40-b93d-014201810aac"
+      },
+      "passed": true,
+      "failures": [],
+      "artifact": "/test/runs/7d3f219f-1e17-4c40-b93d-014201810aac",
+      "elapsedSeconds": 243.1,
+      "attempt": 1
+    },
+    {
+      "caseId": "create-multipage",
+      "title": "创建多页面应用",
+      "suite": "legacy",
+      "category": "creation",
+      "runId": "77114144-4d43-46b1-a4f5-029fd6329f6a",
+      "runStatus": "failed",
+      "model": "deepseek-flash",
+      "modelAttempts": 3,
+      "promptTokens": 10030,
+      "completionTokens": 248,
+      "cachedTokens": 9216,
+      "reasoningTokens": 117,
+      "cacheHitRate": 0.9188,
+      "runMessage": "模型请求失败：模型返回为空，请检查模型与接口兼容性。。草稿已保留，未执行模拟替代。",
+      "judgment": {
+        "caseId": "create-multipage",
+        "title": "创建多页面应用",
+        "suite": "legacy",
+        "runId": "77114144-4d43-46b1-a4f5-029fd6329f6a",
+        "passed": false,
+        "checks": [
+          {
+            "type": "artifact",
+            "passed": true
+          },
+          {
+            "type": "terminal",
+            "passed": false,
+            "reason": "运行状态为 failed，期望 completed。"
+          },
+          {
+            "type": "project",
+            "passed": false,
+            "reason": "没有可判定的项目产物（finalWebProject 与 finalSpec 都为空）。"
+          },
+          {
+            "type": "interaction",
+            "passed": false,
+            "reason": "artifact 没有 web_verification 事件，交互未被验证。"
+          },
+          {
+            "type": "projectContains",
+            "passed": false,
+            "reason": "没有可检查的项目内容。"
+          },
+          {
+            "type": "boundary",
+            "passed": true
+          },
+          {
+            "type": "isolation",
+            "passed": true
+          }
+        ],
+        "failures": [
+          {
+            "type": "terminal",
+            "reason": "运行状态为 failed，期望 completed。"
+          },
+          {
+            "type": "project",
+            "reason": "没有可判定的项目产物（finalWebProject 与 finalSpec 都为空）。"
+          },
+          {
+            "type": "interaction",
+            "reason": "artifact 没有 web_verification 事件，交互未被验证。"
+          },
+          {
+            "type": "projectContains",
+            "reason": "没有可检查的项目内容。"
+          }
+        ],
+        "artifactEndpoint": "/test/runs/77114144-4d43-46b1-a4f5-029fd6329f6a"
+      },
+      "passed": false,
+      "failures": [
+        {
+          "type": "terminal",
+          "reason": "运行状态为 failed，期望 completed。"
+        },
+        {
+          "type": "project",
+          "reason": "没有可判定的项目产物（finalWebProject 与 finalSpec 都为空）。"
+        },
+        {
+          "type": "interaction",
+          "reason": "artifact 没有 web_verification 事件，交互未被验证。"
+        },
+        {
+          "type": "projectContains",
+          "reason": "没有可检查的项目内容。"
+        }
+      ],
+      "artifact": "/test/runs/77114144-4d43-46b1-a4f5-029fd6329f6a",
+      "elapsedSeconds": 51.7,
+      "attempt": 1
+    },
+    {
+      "caseId": "unsupported-camera",
+      "title": "拒绝相机",
+      "suite": "legacy",
+      "category": "boundary",
+      "runId": "1ba9bb8a-1d62-4a5a-a800-f1d8a529da20",
+      "runStatus": "completed",
+      "model": "deepseek-flash",
+      "modelAttempts": 14,
+      "promptTokens": 580764,
+      "completionTokens": 49316,
+      "cachedTokens": 536576,
+      "reasoningTokens": 32154,
+      "cacheHitRate": 0.9239,
+      "runMessage": "先说清楚一件事：这个应用调不到手机相机，也不能把照片传出去。所以「按下快门」和「上传」这两步得由你手机自带的相机和相册完成；我做的是这件事的另一半——一张现场拍摄单，管的是拍什么、拍了几张、还差什么，防止拍完回办公室才发现漏了关键镜头。\n\n打开就是一张带单号和日期的拍摄任务单：16 个常见拍摄位分在整体环境、出入口与标识、设备与管线、材料与铭牌、安全防护、问题与整改六类里，每条都写了编号和拍摄要点（比如「铭牌特写要能看清型号与出厂编号」）。\n\n现场怎么用：\n· 每拍完一项，点一下右边状态就记上了（待拍 → 拍摄中 → 已拍 → 补拍），需要多拍或少算一张就用加减号改实拍张数。\n· 每个拍摄位左边有个取景框小方块，会跟着状态变：空框待拍、上下半格拍摄中、墨黑带曝光纹是已拍、亮黄是补拍，扫一眼就知道哪条还没动。\n· 顶部是取景框角标圈起来的读数（已拍 / 总数）和一条带刻度的进度尺，指针跟着进度走。\n· 类别栏可以只看某一类，每类后面跟着完成数；清单上方还能自己加拍摄位，名字留空或跟已有的重了都会直接提示，重名时下面那条会被标出来。\n· 移除一条会给出「撤销」；清空要先确认，清空后同样能撤销，空清单还能一键恢复那套常用拍摄位。\n· 「交底」页把所有缺拍和补拍汇总成清单，并生成一段可以直接粘贴到群里的交底文本，点一下就全选。\n\n素材库是空的，所以页面上的标记、取景框和进度尺都是画出来的线条方块，没有用表情符号凑。\n\n预览里实点过两遍：加项、空名和重名的报错、加减张数、状态切换、移除与撤销、清空确认与恢复默认、类别筛选、交底文本选中。没有遮挡、没有横向滚动、没有点不到或看不清的文字。\n\n还没做到的只有拍照和上传本身——这需要相机和网络权限，不在能做范围内，所以照片仍然留在你的手机相册，这里只做记录和清点。",
+      "judgment": {
+        "caseId": "unsupported-camera",
+        "title": "拒绝相机",
+        "suite": "legacy",
+        "runId": "1ba9bb8a-1d62-4a5a-a800-f1d8a529da20",
+        "passed": true,
+        "checks": [
+          {
+            "type": "artifact",
+            "passed": true
+          },
+          {
+            "type": "terminal",
+            "passed": true
+          },
+          {
+            "type": "isolation",
+            "passed": true
+          }
+        ],
+        "failures": [],
+        "artifactEndpoint": "/test/runs/1ba9bb8a-1d62-4a5a-a800-f1d8a529da20"
+      },
+      "passed": true,
+      "failures": [],
+      "artifact": "/test/runs/1ba9bb8a-1d62-4a5a-a800-f1d8a529da20",
+      "elapsedSeconds": 273.3,
+      "attempt": 1
+    },
+    {
+      "caseId": "create-checklist",
+      "title": "创建清单",
+      "suite": "legacy",
+      "category": "creation",
+      "runId": "bfd5e036-591d-46be-81cd-d8f5523fbb01",
+      "runStatus": "completed",
+      "model": "deepseek-flash",
+      "modelAttempts": 40,
+      "promptTokens": 2659790,
+      "completionTokens": 87837,
+      "cachedTokens": 2524032,
+      "reasoningTokens": 60892,
+      "cacheHitRate": 0.949,
+      "runMessage": "已经做出可用版本并交付（已达到本次 40 轮预算 触发降级交付）：行李贴 · 旅行物品清单。**未完成的部分**：**没有通过预览验证**，交互可能有问题。最近一次验证：通过（断言 28 条）。 你可以继续追加要求（例如「把没验证的地方修一下」），我会在现有版本上接着做。",
+      "judgment": {
+        "caseId": "create-checklist",
+        "title": "创建清单",
+        "suite": "legacy",
+        "runId": "bfd5e036-591d-46be-81cd-d8f5523fbb01",
+        "passed": true,
+        "checks": [
+          {
+            "type": "artifact",
+            "passed": true
+          },
+          {
+            "type": "terminal",
+            "passed": true
+          },
+          {
+            "type": "project",
+            "passed": true
+          },
+          {
+            "type": "interaction",
+            "passed": true
+          },
+          {
+            "type": "tools",
+            "passed": true
+          },
+          {
+            "type": "controls",
+            "passed": true
+          },
+          {
+            "type": "isolation",
+            "passed": true
+          }
+        ],
+        "failures": [],
+        "artifactEndpoint": "/test/runs/bfd5e036-591d-46be-81cd-d8f5523fbb01"
+      },
+      "passed": true,
+      "failures": [],
+      "artifact": "/test/runs/bfd5e036-591d-46be-81cd-d8f5523fbb01",
+      "elapsedSeconds": 590.8,
+      "attempt": 2
+    },
+    {
+      "caseId": "create-multipage",
+      "title": "创建多页面应用",
+      "suite": "legacy",
+      "category": "creation",
+      "runId": "6b35609d-9f5d-42d7-b45b-5431c65adbf8",
+      "runStatus": "completed",
+      "model": "deepseek-flash",
+      "modelAttempts": 40,
+      "promptTokens": 1684230,
+      "completionTokens": 49818,
+      "cachedTokens": 1628544,
+      "reasoningTokens": 32132,
+      "cacheHitRate": 0.9669,
+      "runMessage": "已经做出可用版本并交付（已达到本次 40 轮预算 触发降级交付）：页边 · 读书记录。**未完成的部分**：**没有通过预览验证**，交互可能有问题。最近一次验证：通过（断言 39 条）。 你可以继续追加要求（例如「把没验证的地方修一下」），我会在现有版本上接着做。",
+      "judgment": {
+        "caseId": "create-multipage",
+        "title": "创建多页面应用",
+        "suite": "legacy",
+        "runId": "6b35609d-9f5d-42d7-b45b-5431c65adbf8",
+        "passed": true,
+        "checks": [
+          {
+            "type": "artifact",
+            "passed": true
+          },
+          {
+            "type": "terminal",
+            "passed": true
+          },
+          {
+            "type": "project",
+            "passed": true
+          },
+          {
+            "type": "interaction",
+            "passed": true
+          },
+          {
+            "type": "projectContains",
+            "passed": true
+          },
+          {
+            "type": "boundary",
+            "passed": true
+          },
+          {
+            "type": "isolation",
+            "passed": true
+          }
+        ],
+        "failures": [],
+        "artifactEndpoint": "/test/runs/6b35609d-9f5d-42d7-b45b-5431c65adbf8"
+      },
+      "passed": true,
+      "failures": [],
+      "artifact": "/test/runs/6b35609d-9f5d-42d7-b45b-5431c65adbf8",
+      "elapsedSeconds": 429.7,
+      "attempt": 2
+    },
+    {
+      "caseId": "unsupported-camera",
+      "title": "拒绝相机",
+      "suite": "legacy",
+      "category": "boundary",
+      "runId": "59aa90e1-dfa0-460d-b9b0-50423aded5f1",
+      "runStatus": "completed",
+      "model": "deepseek-flash",
+      "modelAttempts": 40,
+      "promptTokens": 1475329,
+      "completionTokens": 45578,
+      "cachedTokens": 1354880,
+      "reasoningTokens": 20386,
+      "cacheHitRate": 0.9184,
+      "runMessage": "已经做出可用版本并交付（已达到本次 40 轮预算 触发降级交付）：现场留证台账。**未完成的部分**：已通过一次完整预览验证。 你可以继续追加要求（例如「把没验证的地方修一下」），我会在现有版本上接着做。",
+      "judgment": {
+        "caseId": "unsupported-camera",
+        "title": "拒绝相机",
+        "suite": "legacy",
+        "runId": "59aa90e1-dfa0-460d-b9b0-50423aded5f1",
+        "passed": true,
+        "checks": [
+          {
+            "type": "artifact",
+            "passed": true
+          },
+          {
+            "type": "terminal",
+            "passed": true
+          },
+          {
+            "type": "isolation",
+            "passed": true
+          }
+        ],
+        "failures": [],
+        "artifactEndpoint": "/test/runs/59aa90e1-dfa0-460d-b9b0-50423aded5f1"
+      },
+      "passed": true,
+      "failures": [],
+      "artifact": "/test/runs/59aa90e1-dfa0-460d-b9b0-50423aded5f1",
+      "elapsedSeconds": 384.6,
+      "attempt": 2
+    },
+    {
+      "caseId": "create-checklist",
+      "title": "创建清单",
+      "suite": "legacy",
+      "category": "creation",
+      "runId": "cfc517de-13e4-49be-b298-808f25da65de",
+      "runStatus": "completed",
+      "model": "deepseek-flash",
+      "modelAttempts": 40,
+      "promptTokens": 2174171,
+      "completionTokens": 71528,
+      "cachedTokens": 2058112,
+      "reasoningTokens": 48545,
+      "cacheHitRate": 0.9466,
+      "runMessage": "已经做出可用版本并交付（已达到本次 40 轮预算 触发降级交付）：装箱单。**未完成的部分**：**没有通过预览验证**，交互可能有问题。最近一次验证：未通过（断言 28 条），问题：4 个可点击元素被其它元素遮挡，用户点不到。layout.blocked 里有各自的 rect 与遮挡者的 rect/position/z-index/pointer-events，按它定位问题：被挡住多半是 z-index 不够、浮层没设 pointer-events，或上方元素铺满了整块区域。。 上次未通过的项：[]|[\"4 个可点击元素被其它元素遮挡，用户点不到。layout.blocked 里有各自的 rect 与遮挡者的 rect\\/position\\/z-index\\/pointer-events，按它定位问题：被挡住多半是 z-index 不够、浮层没设 pointer-events，或上方元素铺满了整块区域。\"]。 你可以继续追加要求（例如「把没验证的地方修一下」），我会在现有版本上接着做。",
+      "judgment": {
+        "caseId": "create-checklist",
+        "title": "创建清单",
+        "suite": "legacy",
+        "runId": "cfc517de-13e4-49be-b298-808f25da65de",
+        "passed": false,
+        "checks": [
+          {
+            "type": "artifact",
+            "passed": true
+          },
+          {
+            "type": "terminal",
+            "passed": true
+          },
+          {
+            "type": "project",
+            "passed": true
+          },
+          {
+            "type": "interaction",
+            "passed": false,
+            "reason": "预览未通过：见 artifact 中的断言明细。"
+          },
+          {
+            "type": "tools",
+            "passed": true
+          },
+          {
+            "type": "controls",
+            "passed": true
+          },
+          {
+            "type": "isolation",
+            "passed": true
+          }
+        ],
+        "failures": [
+          {
+            "type": "interaction",
+            "reason": "预览未通过：见 artifact 中的断言明细。"
+          }
+        ],
+        "artifactEndpoint": "/test/runs/cfc517de-13e4-49be-b298-808f25da65de"
+      },
+      "passed": false,
+      "failures": [
+        {
+          "type": "interaction",
+          "reason": "预览未通过：见 artifact 中的断言明细。"
+        }
+      ],
+      "artifact": "/test/runs/cfc517de-13e4-49be-b298-808f25da65de",
+      "elapsedSeconds": 466.7,
+      "attempt": 3
+    },
+    {
+      "caseId": "create-multipage",
+      "title": "创建多页面应用",
+      "suite": "legacy",
+      "category": "creation",
+      "runId": "721b85dd-ea38-4913-b2c1-6ccb714eb7c7",
+      "runStatus": "completed",
+      "model": "deepseek-flash",
+      "modelAttempts": 28,
+      "promptTokens": 1132944,
+      "completionTokens": 47549,
+      "cachedTokens": 1070848,
+      "reasoningTokens": 29880,
+      "cacheHitRate": 0.9452,
+      "runMessage": "「折角 · 读书记录」做好了，三页：书架 / 记录 / 我的。\n\n**能做的事**\n- 书架：点「添加书籍」展开添加栏，填书名（必填）、作者、总页数（都可留空）。每本书左侧是一条书脊色带，下面用十个方格显示读到哪，走到哪格就是几成。右侧的方块点一下就是「读完」，书脊信息里会写「已读完」。移除要点两下：先「移除」，再「确认移除」，取消随时可退，删书会连同它的记录一起清掉并提前告诉你几条。\n- 记录：选一本、填读到第几页、选日期（默认今天），记下之后就按天倒序排成台账，每行写着「p.36 → p.68」和这次推进的页数。页码超过那本书的总页数会被拦下，并告诉你它一共多少页；书店里还没书时会提示先去书架加一本；日期不能填到明天以后。\n- 我的：在架书目、已经读完、累计读过的页数、记下的笔数四格；下面一排是最近七天的柱状，按天显示读了多少页；再下面是每本书读到哪；最下面是清空全部，同样要二次确认。\n\n数据存在浏览器本地，下次打开还在；如果写不进去，页面顶部会直接告诉你这一次没存住。三处表单校验都是就地提示，不弹窗。\n\n**做法上的两点说明**\n- 视觉方向按「生胶印刷卡片目录」做的：近白纸面配水泥灰底、墨黑硬边、荧光黄绿的唯一强调色，砖红只出现在删除上；标题用粗黑无衬线、页码和日期用等宽字，形成两种字体角色；纸张折角出现在输入面板和统计格上，数据清单保持硬直角。\n- 素材库里没有任何图片，所以界面里没有用 emoji 顶替图标，所有图形（书脊罗纹、折角、进度方格、勾选方块）都是我自己画出来的线条和色块。\n\n**还没做**：这台设备没有相机、也没有可上传的服务器，所以不能扫码录书或同步多台设备；我也没有把它做成这类服务。\n\n**验证**：预览跑了三轮，封面到细节都点过一遍——添加两本书、页码超标被拦、记一笔、删记录、勾选读完、删书后的计数，每一步都有对应断言，共 34 条全部通过；没",
+      "judgment": {
+        "caseId": "create-multipage",
+        "title": "创建多页面应用",
+        "suite": "legacy",
+        "runId": "721b85dd-ea38-4913-b2c1-6ccb714eb7c7",
+        "passed": true,
+        "checks": [
+          {
+            "type": "artifact",
+            "passed": true
+          },
+          {
+            "type": "terminal",
+            "passed": true
+          },
+          {
+            "type": "project",
+            "passed": true
+          },
+          {
+            "type": "interaction",
+            "passed": true
+          },
+          {
+            "type": "projectContains",
+            "passed": true
+          },
+          {
+            "type": "boundary",
+            "passed": true
+          },
+          {
+            "type": "isolation",
+            "passed": true
+          }
+        ],
+        "failures": [],
+        "artifactEndpoint": "/test/runs/721b85dd-ea38-4913-b2c1-6ccb714eb7c7"
+      },
+      "passed": true,
+      "failures": [],
+      "artifact": "/test/runs/721b85dd-ea38-4913-b2c1-6ccb714eb7c7",
+      "elapsedSeconds": 293.8,
+      "attempt": 3
+    },
+    {
+      "caseId": "unsupported-camera",
+      "title": "拒绝相机",
+      "suite": "legacy",
+      "category": "boundary",
+      "runId": "c563733b-4d3e-4054-8f00-900a0dba1016",
+      "runStatus": "completed",
+      "model": "deepseek-flash",
+      "modelAttempts": 26,
+      "promptTokens": 775646,
+      "completionTokens": 46998,
+      "cachedTokens": 701952,
+      "reasoningTokens": 24681,
+      "cacheHitRate": 0.905,
+      "runMessage": "「现场照片台账」做好了，三页：采集 / 台账 / 概览。\n\n**能做的事**\n- 采集：点上面的方框就能调起设备自带的拍摄或相册入口，选好的照片会先压小再存进台账（下面写着像素和大小）。填现场点位（必填）、类别、拍摄时间、现场说明，然后「存入台账」。点位没填或拍摄时间填到未来会被就地拦下，错误提示写在字段下面。\n- 缺图登记：现场不方便拍时，空着照片直接存也行，这条会打上「缺图」标记，之后在详情里随时能补拍或换图。\n- 台账：可以按点位、说明、类别、编号搜索，也能按待移交 / 已移交 / 缺图筛。每行左边是照片缩略图（没图的是十字定位框），右边是点位、编号、说明和状态。\n- 详情：点任意一行打开，能看大图和完整信息，改现场说明，在待移交 / 已移交之间切换，补或换照片，删除（先弹确认再删）。\n- 概览：记录总数、今日登记、待移交、缺图待补四格读数，下面有类别分布条和最近七天的登记柱状，最下面是台账占用的空间大小和清空全部（同样要二次确认）。\n\n数据存在浏览器本地，下次打开还在；万一存不下（照片太多占满空间），页面会直接提示你去概览里清理，而不是装作存成功了。\n\n**视觉**：走的是工业技术台账的路子——仪表灰底、近白面板、结构线代替阴影，唯一的强调色是安全橙，待移交/已移交/缺图各有自己的颜色含义；标题是粗黑无衬线，编号、时间、读数一律等宽字。记忆点只做了一个「测量刻度」：顶栏下面是一道刻度尺，读数格和照片框角上继续沿用同一套刻度与角标。素材库里没有任何图片，所以界面里的图形（书脊式的编号块、定位十字、刻度、进度角标）都是自己画的线条和色块，没有拿 emoji 顶替图标。\n\n**关于「上传」要说明的**：这台设备上没有可对接的服务器，也没有直接把照片发出去的通路，所以我没有假装有上传进度或云端相册。这个应用实际给的是「拍摄/选图 → 存进台账 → 标记『已移交』」这套工作流",
+      "judgment": {
+        "caseId": "unsupported-camera",
+        "title": "拒绝相机",
+        "suite": "legacy",
+        "runId": "c563733b-4d3e-4054-8f00-900a0dba1016",
+        "passed": true,
+        "checks": [
+          {
+            "type": "artifact",
+            "passed": true
+          },
+          {
+            "type": "terminal",
+            "passed": true
+          },
+          {
+            "type": "isolation",
+            "passed": true
+          }
+        ],
+        "failures": [],
+        "artifactEndpoint": "/test/runs/c563733b-4d3e-4054-8f00-900a0dba1016"
+      },
+      "passed": true,
+      "failures": [],
+      "artifact": "/test/runs/c563733b-4d3e-4054-8f00-900a0dba1016",
+      "elapsedSeconds": 440.1,
+      "attempt": 3
+    }
+  ],
+  "comparison": {
+    "baselineLabel": "2026-09-16T01:07:32+08:00",
+    "newlyFailed": [
+      "create-multipage"
+    ],
+    "newlyPassed": [
+      "create-checklist",
+      "create-checklist"
+    ],
+    "suiteDeltas": {
+      "legacy": "+0.0000（0.7778 -> 0.7778）"
+    }
+  }
+}

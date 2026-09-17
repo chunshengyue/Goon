@@ -1,0 +1,154 @@
+{
+  "environment": {
+    "capturedAt": "2026-09-14T20:52:04+08:00",
+    "repoCommit": "ae7b4b50d7d0ff4345916aba35d75c26a589e8f0",
+    "repoDirty": true,
+    "adb": "C:\\Users\\17525\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe",
+    "device": "default",
+    "hostPort": 18765,
+    "androidRelease": "16",
+    "androidSdk": "36",
+    "deviceModel": "PHK110",
+    "apkVersion": "1.0",
+    "stayAwake": true
+  },
+  "models": [
+    "deepseek-flash"
+  ],
+  "totals": {
+    "cases": 3,
+    "evaluated": 2,
+    "passed": 2,
+    "failed": 0,
+    "taskSuccessRate": 1.0,
+    "pendingSkipped": 0,
+    "pendingRuntime": 1
+  },
+  "bySuite": {
+    "legacy": {
+      "total": 2,
+      "passed": 2,
+      "passRate": 1.0
+    }
+  },
+  "skipped": [],
+  "pendingRuntime": [
+    "interruption"
+  ],
+  "results": [
+    {
+      "caseId": "provider-fallback",
+      "title": "Provider 降级",
+      "suite": "legacy",
+      "category": "fallback",
+      "runId": "85c4b467-89e9-415c-8934-72e1db1d3028",
+      "runStatus": "failed",
+      "model": "deepseek-flash",
+      "modelAttempts": 1,
+      "promptTokens": null,
+      "completionTokens": null,
+      "runMessage": "模型请求失败：注入的 connection_error 故障：模型服务不可用。。草稿已保留，未执行模拟替代。",
+      "judgment": {
+        "caseId": "provider-fallback",
+        "title": "Provider 降级",
+        "suite": "legacy",
+        "runId": "85c4b467-89e9-415c-8934-72e1db1d3028",
+        "passed": true,
+        "checks": [
+          {
+            "type": "artifact",
+            "passed": true
+          },
+          {
+            "type": "terminal",
+            "passed": true
+          },
+          {
+            "type": "noProject",
+            "passed": true
+          },
+          {
+            "type": "isolation",
+            "passed": true
+          }
+        ],
+        "failures": [],
+        "artifactEndpoint": "/test/runs/85c4b467-89e9-415c-8934-72e1db1d3028"
+      },
+      "passed": true,
+      "failures": [],
+      "artifact": "/test/runs/85c4b467-89e9-415c-8934-72e1db1d3028",
+      "elapsedSeconds": 1.4
+    },
+    {
+      "caseId": "interruption",
+      "title": "中断恢复",
+      "suite": "legacy",
+      "category": "recovery",
+      "runId": "205fe6ea-db15-4c23-9e60-4e8d3bb58f95",
+      "judgment": {
+        "pending": true
+      },
+      "failures": [
+        {
+          "type": "scenario",
+          "reason": "运行在取消前已经结束：failed（模型请求失败：Unable to resolve host \"cow.g201.com\": No address associated with hostname。草稿已保留，未执行模拟替代。）"
+        }
+      ],
+      "passed": false,
+      "elapsedSeconds": 11.4
+    },
+    {
+      "caseId": "empty-request",
+      "title": "空请求",
+      "suite": "legacy",
+      "category": "input",
+      "runId": "02d4aec9-3189-4b10-abc1-8c5a2d4b66a3",
+      "runStatus": "completed",
+      "model": "deepseek-flash",
+      "modelAttempts": 0,
+      "promptTokens": null,
+      "completionTokens": null,
+      "runMessage": "为了避免误操作，当前请求暂未执行：缺少可理解的用户目标。",
+      "judgment": {
+        "caseId": "empty-request",
+        "title": "空请求",
+        "suite": "legacy",
+        "runId": "02d4aec9-3189-4b10-abc1-8c5a2d4b66a3",
+        "passed": true,
+        "checks": [
+          {
+            "type": "artifact",
+            "passed": true
+          },
+          {
+            "type": "terminal",
+            "passed": true
+          },
+          {
+            "type": "noProject",
+            "passed": true
+          },
+          {
+            "type": "isolation",
+            "passed": true
+          }
+        ],
+        "failures": [],
+        "artifactEndpoint": "/test/runs/02d4aec9-3189-4b10-abc1-8c5a2d4b66a3"
+      },
+      "passed": true,
+      "failures": [],
+      "artifact": "/test/runs/02d4aec9-3189-4b10-abc1-8c5a2d4b66a3",
+      "elapsedSeconds": 1.5
+    }
+  ],
+  "comparison": {
+    "baselineLabel": "2026-09-14T20:47:29+08:00",
+    "newlyFailed": [],
+    "newlyPassed": [],
+    "suiteDeltas": {
+      "legacy": "+0.0000（1.0 -> 1.0）"
+    }
+  }
+}
